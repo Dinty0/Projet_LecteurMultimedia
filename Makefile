@@ -4,10 +4,12 @@ EXEC=ghost
 # Compiler
 IDIR= include/SFML include/SFGUI
 IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
+LIBDIR = lib
+LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
 CXXFLAGS=-std=c++11 -c $(IDIRFLAG)
 
 # Linker
-LFLAGS=$(IDIRFLAG)
+LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Directories
 SRCDIR=src
