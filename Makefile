@@ -2,14 +2,14 @@
 EXEC=ghost
 
 # Compiler
-IDIR= include/SFML include/SFGUI
+IDIR=include
 IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
-LIBDIR = lib
-LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
+#LIBDIR=lib
+#LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
 CXXFLAGS=-std=c++11 -c $(IDIRFLAG)
 
 # Linker
-LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
+LFLAGS=$(IDIRFLAG)
 
 # Directories
 SRCDIR=src
@@ -60,7 +60,7 @@ $(BINDIR)/$(EXEC): $(OBJECTS)
 	@$(LINKER) $@ $(LFLAGS) $^
 
 $(OBJDIR)/%.o: %.cpp
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@ -L lib -lsfgui -lsfml-window -lsfml-system -lsfml-graphics
 
 .PHONY: gcc gcc-debug clang clang-debug clean 
 
