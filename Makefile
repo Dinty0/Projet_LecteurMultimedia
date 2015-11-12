@@ -34,8 +34,8 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-script:
-	@./modifVariable.sh
+#script:
+#	@./modifVariable.sh
 
 gcc: clean
 gcc: CXX=g++
