@@ -4,12 +4,13 @@ EXEC=ghost
 # Compiler
 IDIR=include
 IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
-#LIBDIR=lib
-#LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
-CXXFLAGS=-std=c++11 -c $(IDIRFLAG)
+LIBDIR=lib
+LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
+CXXFLAGS=-std=c++11 -c  $(IDIRFLAG)
+SFMLFLAG= -lsfgui -lsfml-window -lsfml-system -lsfml-graphics $(LIBDIRFLAG)
 
 # Linker
-LFLAGS=$(IDIRFLAG)
+LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Directories
 SRCDIR=src
@@ -32,6 +33,10 @@ vpath %.cpp $(SRCDIR)
 # $< is the first item in the dependencies list
 
 # Rules
+
+script:
+	@./modifVariable.sh
+
 gcc: clean
 gcc: CXX=g++
 gcc: LINKER=g++ -o
@@ -57,10 +62,10 @@ clang-debug: CXXFLAGS += -g -stdlib=libc++
 clang-debug: $(BINDIR)/$(EXEC)
 
 $(BINDIR)/$(EXEC): $(OBJECTS)
-	@$(LINKER) $@ $(LFLAGS) $^
+	@$(LINKER) $@ $(LFLAGS) $^ $(SFMLFLAG)
 
 $(OBJDIR)/%.o: %.cpp
-	@$(CXX) $(CXXFLAGS) -c $< -o $@ -L lib -lsfgui -lsfml-window -lsfml-system -lsfml-graphics
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 .PHONY: gcc gcc-debug clang clang-debug clean 
 
