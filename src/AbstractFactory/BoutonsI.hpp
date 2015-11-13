@@ -10,11 +10,11 @@
 
 #include "Boutons.hpp"
 #include <vector>
+#include "../include/SFGUI/Button.hpp"
 
 class BoutonsI : public Boutons
 {		
 	private:
-		std::vector<sfg::Button*> _bi;
 	public:
 		BoutonsI();
 		void creer();

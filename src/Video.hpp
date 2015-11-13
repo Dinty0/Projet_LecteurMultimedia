@@ -10,14 +10,15 @@
 
 
 #include "CreerMultimedia.hpp"
+#include "BoutonsVA.hpp"
+#include <vector>
 
-class Boutons;
 class Format;
 
 class Video : public CreerMultimedia
 {
 	private:
-		Boutons* _boutons;
+		std::vector<BoutonsVA> _boutons;
 		Format*	_format;
 
 	public:

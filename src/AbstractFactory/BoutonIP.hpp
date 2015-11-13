@@ -13,7 +13,6 @@
 class BoutonIP : public BoutonsI
 {
 	public:
-		BoutonIP();
 		void creer();
 };
 

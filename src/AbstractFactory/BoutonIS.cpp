@@ -1,6 +1,4 @@
-#include <../SFGUI/SFGUI.hpp>
-#include <../SFGUI/Button.hpp>
-#include <../SFML/Graphics.hpp>
+
 
 #include "BoutonIS.hpp"
 

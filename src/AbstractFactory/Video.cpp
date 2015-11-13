@@ -13,10 +13,18 @@ void Video::creerMultimedia()
 	Video::creerBoutons();
 	Video::creerFormat();
 }
+
+/*
 void Video::creerBoutons()
 {
-	_boutons->creerBoutonsVA();
-}
+	BoutonLec blec();
+	BoutonPause bp();
+	BoutonStop bs();
+
+	_boutons.push_back(blec);
+	_boutons.push_back(bp);
+	_boutons.push_back(bs);
+}*/
 
 void Video::creerFormat()
 {

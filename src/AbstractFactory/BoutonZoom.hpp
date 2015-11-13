@@ -14,6 +14,7 @@ class BoutonZoom : public BoutonsI
 {
 	public:
 		BoutonZoom();
+		void creer();
 };
 
 #endif

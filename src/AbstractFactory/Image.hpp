@@ -17,7 +17,7 @@ class Format;
 class Image : public CreerMultimedia
 {
 	private:
-		BoutonsI _boutons;
+		std::vector<BoutonsI> _boutons;
 		Format* _format;
 
 	public:

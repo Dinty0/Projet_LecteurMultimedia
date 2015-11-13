@@ -1,10 +1,10 @@
 // Always include the necessary header files.
 // Including SFGUI/Widgets.hpp includes everything
 // you can possibly need automatically.
-#include <SFGUI/SFGUI.hpp>
-#include <SFGUI/Widgets.hpp>
+#include <../include/SFGUI/SFGUI.hpp>
+#include <../include/SFGUI/Widgets.hpp>
 
-#include <SFML/Graphics.hpp>
+#include <../include/SFML/Graphics.hpp>
 
 class ButtonsExample {
 	public:
