@@ -1,0 +1,5 @@
+class ButtonNI
+{
+	public:
+		ButtonNI();
+};

@@ -1,0 +1,5 @@
+class ButtonSt
+{
+	public:
+		ButtonSt();
+};

@@ -1,0 +1,5 @@
+class ButtonPa
+{
+	public:
+		ButtonPa();
+};
