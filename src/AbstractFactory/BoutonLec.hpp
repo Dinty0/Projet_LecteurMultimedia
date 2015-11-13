@@ -13,7 +13,10 @@
 class BoutonLec : public BoutonsVA
 {
 	public:
-		BoutonLec();
+		/**
+		 * @brief Crée le bouton "Lecture"
+		 *
+		 */
 		void creer();
 };
 

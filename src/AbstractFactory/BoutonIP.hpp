@@ -13,6 +13,10 @@
 class BoutonIP : public BoutonsI
 {
 	public:
+		/**
+		 * @brief Crée le bouton "Image précédente"
+		 *
+		 */
 		void creer();
 };
 

@@ -13,7 +13,10 @@
 class BoutonStop : public BoutonsVA
 {
 	public:
-		BoutonStop();
+		/**
+		 * @brief Crée le bouton "Stop"
+		 *
+		 */
 		void creer();
 };
 

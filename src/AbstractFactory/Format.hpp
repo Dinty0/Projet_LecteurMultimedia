@@ -11,7 +11,15 @@
 class Format
 {
 	public:
+		/**
+		 * @brief Fonction abstraite qui force les classes filles a implémenter une fonction "creerPetitFormat"
+		 *
+		 */
 		virtual void creerPetitFormat()=0;
+		/**
+		 * @brief Fonction abstraite qui force les classes filles a implémenter une fonction "creerGrandFormat"
+		 *
+		 */
 		virtual void creerGrandFormat()=0;
 };
 

@@ -11,8 +11,20 @@
 class CreerMultimedia
 {
 	public:
+		/**
+		 * @brief Fonction abstraite qui force les classes filles a implémenter une fonction "creerMultimedia"
+		 *
+		 */
 		virtual void creerMultimedia()=0;
+		/**
+		 * @brief Fonction abstraite qui force les classes filles a implémenter une fonction "creerBoutons"
+		 *
+		 */
 		virtual void creerBoutons()=0;
+		/**
+		 * @brief Fonction abstraite qui force les classes filles a implémenter une fonction "creerFormat"
+		 *
+		 */
 		virtual void creerFormat()=0;
 };
 

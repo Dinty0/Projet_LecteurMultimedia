@@ -12,6 +12,10 @@
 class Boutons
 {	
 	public:
+		/**
+		 * @brief Fonction abstraite qui force les classes filles a implémenter une fonction "creer"
+		 *
+		 */
 		virtual void creer()=0;
 };
 

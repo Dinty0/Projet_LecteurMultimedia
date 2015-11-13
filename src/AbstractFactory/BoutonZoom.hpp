@@ -13,7 +13,10 @@
 class BoutonZoom : public BoutonsI
 {
 	public:
-		BoutonZoom();
+		/**
+		 * @brief Crée le bouton "Zoom"
+		 *
+		 */
 		void creer();
 };
 

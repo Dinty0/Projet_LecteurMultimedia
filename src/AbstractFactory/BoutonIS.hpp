@@ -13,7 +13,10 @@
 class BoutonIS : public BoutonsI
 {
 	public:
-		BoutonIS();
+		/**
+		 * @brief Crée le bouton "Image suivante"
+		 *
+		 */
 		void creer();
 };
 
