@@ -7,7 +7,7 @@ IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
 LIBDIR=lib
 LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
 CXXFLAGS=-std=c++11 -c  $(IDIRFLAG)
-SFMLFLAG= -ltgui -lsfml-window -lsfml-system -lsfml-graphics $(LIBDIRFLAG)
+SFMLFLAG= -lGLEW -lavcodec -lavdevice -lavfilter -lavformat -lavutil -lswresample -lswscale -lsfeMovie -ltgui -lsfml-window -lsfml-system -lsfml-graphics $(LIBDIRFLAG)
 
 # Linker
 LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
