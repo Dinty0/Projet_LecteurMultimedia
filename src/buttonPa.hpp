@@ -8,7 +8,9 @@
 #ifndef BUTTONPA_H
 #define BUTTONPA_H 
 
-class ButtonPa
+#include "button.hpp"
+
+class ButtonPa : public Button
 {
 	public:
 		

@@ -7,7 +7,7 @@ Interface ImageInterfaceFactory::createInterface()
 	ButtonNI bni();
 	ButtonPI bpi();
 	ButtonsI bi(bni,bpi);
-	vector<library::buttons> b = bi.createButtons();
+	std::vector<library::buttons> b = bi.createButtons();
 
 	// Création du format
 	FormatBig fb();

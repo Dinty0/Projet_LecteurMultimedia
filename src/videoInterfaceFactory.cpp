@@ -1,6 +1,10 @@
 #include "videoInterfaceFactory.hpp"
 #include "interface.hpp"
 
+#include <SFML/Graphics.hpp>
+#include <TGUI/TGUI.hpp>
+VideoInterfaceFactory::VideoInterfaceFactory(){}
+
 Interface VideoInterfaceFactory::createInterface(ButtonsVA bva, FormatBig fb)
 {
 	// Création des boutons
@@ -8,7 +12,7 @@ Interface VideoInterfaceFactory::createInterface(ButtonsVA bva, FormatBig fb)
 	ButtonPa bpa();
 	ButtonSt bst();
 	ButtonsVA bva(bpl,bpa,bst);
-	std::vector<library::buttons> b = bva.createButtons();
+	std::vector<Button> b = bva.createButtons();
 
 	// Création du format
 	FormatBig fb();

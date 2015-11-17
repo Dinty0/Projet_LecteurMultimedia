@@ -10,6 +10,8 @@
 
 #include <vector>
 #include "format.hpp"
+#include <SFML/Graphics.hpp>
+#include <TGUI/TGUI.hpp>
 
 class Interface
 {

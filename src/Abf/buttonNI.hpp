@@ -6,6 +6,9 @@
  */
 
 
+#ifndef BUTTONNI_H
+#define BUTTONNI_H
+ 
 class ButtonNI
 {
 	public:
@@ -16,3 +19,5 @@ class ButtonNI
 		 */
 		ButtonNI();
 };
+
+#endif

@@ -5,6 +5,9 @@
  * @brief Classe FormatSmall, permettant de créer le format "petit"
  */
 
+#ifndef FORMATSMALL_H
+#define FORMATSMALL_H
+
 #include "format.hpp"
 
 class FormatSmall : public Format
@@ -25,5 +28,7 @@ class FormatSmall : public Format
 		 * @return Un Format
 		 *
 		 */
-		Format createFormat();
+		FormatSmall createFormat();
 };
+
+#endif

@@ -5,9 +5,14 @@
  * @brief Classe AudioInterfaceFactory, utilisé pour la création de l'interface lors de la lecture d'un fichier audio
  */
 
+#ifndef AUDIOINTERFACEFACTORY_H
+#define AUDIOINTERFACEFACTORY_H
+ 
 #include "interfaceFactory.hpp"
 
 class Interface;
+class ButtonsVA;
+class FormatSmall;
 
 class AudioInterfaceFactory : public InterfaceFactory
 {
@@ -17,5 +22,7 @@ class AudioInterfaceFactory : public InterfaceFactory
 		 * @param ButtonsVA bva, FormatSmall fs
 		 * @return Interface audio
 		 */
-		Interface createInterface(ButtonsVA bva, FormatSmall fs);
+		Interface createInterface(Audio a);
 };
+
+#endif

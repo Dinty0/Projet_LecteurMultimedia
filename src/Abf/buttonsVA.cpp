@@ -11,10 +11,16 @@ ButtonPl ButtonsVA::getButtonPl() { return _bpl; }
 ButtonPa ButtonsVA::getButtonPa() { return _bpa; }
 ButtonSt ButtonsVA::getButtonSt() { return _bst; }
 
-vector<library::buttons> ButtonsVA::createButtons() 
+std::vector<tgui::Button> ButtonsVA::createButtons() 
 {
-	vector<library::buttons> bva;
+	
+	ButtonPl bpl();
+	ButtonPa bpa();
+	ButtonSt bst();
+	std::vector<library::buttons> bva;
 	bva[0] = _bpl;
 	bva[1] = _bpa;
 	bva[2] = _bst;
+
+	return bva;
 }

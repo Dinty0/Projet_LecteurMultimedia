@@ -20,7 +20,7 @@ class InterfaceFactory
 		 * @return Une Interface
 		 *
 		 */
-		virtual Interface createInterface(Media m)=0;
+		Interface createInterface(Media m);
 };
 
 #endif

@@ -8,7 +8,11 @@
 #ifndef BUTTONS_H
 #define BUTTONS_H
 
+#include "button.hpp"
+
 #include <vector>
+#include <SFML/Graphics.hpp>
+#include <TGUI/TGUI.hpp>
 
 class Buttons
 {
@@ -18,7 +22,7 @@ class Buttons
 		 * @return Un vecteur de boutons
 		 *
 		 */
-		virtual std::vector<tgui::Button> createButtons()=0;
+		std::vector<Button> createButtons();
 };
 
 #endif

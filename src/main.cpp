@@ -3,8 +3,14 @@
 #include <sfeMovie/Movie.hpp>
 #define THEME_CONFIG_FILE "src/widgets/Black.conf"
 
+#include "video.hpp"
+
 int main()
 {
+
+    Video vid;
+    vid.afficher();
+    /*
     sf::RenderWindow window(sf::VideoMode(600, 100), "Lecteur multimedia");
     tgui::Gui gui(window);
     tgui::Callback callback;
@@ -76,6 +82,6 @@ int main()
     window.display();
 
     }
-
+    */
     return 0;
 }

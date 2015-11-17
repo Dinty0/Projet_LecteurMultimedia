@@ -9,19 +9,23 @@
 #define BUTTONSVA_H
 
 #include "buttons.hpp"
+#include "button.hpp"
+#include "buttonPl.hpp"
+#include "buttonPa.hpp"
+#include "buttonSt.hpp"
 
 class ButtonsVA : public Buttons
 {
 	public:
-		ButtonPl _bpl;
-		ButtonPa _bpa;
-		ButtonSt _bst;
+		tgui::Button _bpl;
+		tgui::Button _bpa;
+		tgui::Button _bst;
 	private:
 		/*
 		 * @brief Constructeur
 		 *
 		 */
-		ButtonsVA();
+		ButtonsVA(tgui::Button bpl, tgui::Button bpa, tgui::Button bst);
 
 		/*
 		 * @brief Accesseur
@@ -49,7 +53,7 @@ class ButtonsVA : public Buttons
 		 * @return Un vecteur de boutons
 		 *
 		 */
-		std::vector<tgui::Button> createButtons();
+		std::vector<Button> createButtons();
 };
 
 #endif

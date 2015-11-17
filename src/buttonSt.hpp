@@ -8,7 +8,9 @@
 #ifndef BUTTONST_H
 #define BUTTONST_H
 
-class ButtonSt
+#include "button.hpp"
+
+class ButtonSt : public Button
 {
 	public:
 		/*

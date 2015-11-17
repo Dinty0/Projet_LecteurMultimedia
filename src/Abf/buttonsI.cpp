@@ -1,4 +1,6 @@
 #include "buttonsI.hpp"
+#include "buttonNI.hpp"
+#include "buttonPI.hpp"
 
 ButtonsI::ButtonsI(ButtonNI bni, ButtonPI bpi)
 {
@@ -9,9 +11,9 @@ ButtonsI::ButtonsI(ButtonNI bni, ButtonPI bpi)
 ButtonNI ButtonsI::getButtonNI() { return _bni; }
 ButtonPI ButtonsI::getButtonPI() { return _bpi; }
 
-vector<library::buttons> ButtonsI::createButtons() 
+std::vector<tgui::Button> ButtonsI::createButtons() 
 {
-	vector<library::buttons> bi;
+	std::vector<library::buttons> bi;
 	bva[0] = _bni;
 	bva[1] = _bpi;
 }

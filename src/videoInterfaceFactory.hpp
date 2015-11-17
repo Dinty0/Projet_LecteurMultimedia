@@ -11,15 +11,19 @@
 #include "interfaceFactory.hpp"
 
 class Interface;
+class ButtonsVA;
+class FormatBig;
 
 class VideoInterfaceFactory : public InterfaceFactory
 {
 	public:
+
+		VideoInterfaceFactory();
 		/**
 		 * @brief Crée l'interface adéquate à la lecture d'un fichier video
 		 * @param ButtonsVa bva, FormatBig fb
 		 */
-		Interface createInterface(Video v);
+		Interface createInterface(ButtonsVA bva, FormatBig fb);
 };
 
 #endif

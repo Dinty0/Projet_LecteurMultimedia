@@ -5,8 +5,14 @@
  * @brief Classe ButtonsI, héritant de Buttons, permettant de créer les boutons "image" nécessaire dans une interface 
  */
 
+#ifndef BUTTONSI_H
+#define BUTTONSI_H
 
 #include "buttons.hpp"
+#include <vector>
+
+class ButtonNI;
+class ButtonPI;
 
 class ButtonsI : public Buttons
 {
@@ -40,5 +46,7 @@ class ButtonsI : public Buttons
 		 * @return Un vecteur de boutons
 		 *
 		 */
-		vector<library::buttons> createButtons();
+		std::vector<tgui::Button> createButtons();
 };
+
+#endif

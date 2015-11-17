@@ -5,6 +5,9 @@
  * @brief Classe ButtonPI, générant des boutons de type "image précédente"
  */
 
+#ifndef BUTTONPI_H
+#define BUTTONPI_H
+ 
 class ButtonPI.hpp
 {
 	public:
@@ -15,3 +18,5 @@ class ButtonPI.hpp
 		 */
 		ButtonPI();
 };
+
+#endif
