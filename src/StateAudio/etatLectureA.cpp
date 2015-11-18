@@ -1,7 +1,11 @@
 #include "etatLectureA.hpp"
 
-EtatLectureA::EtatLectureA()
-{}
+EtatLectureA::EtatLectureA(){}
+
+EtatLectureA::EtatLectureA(Audio* a)
+{
+	_audio = a;
+}
 
 void EtatLectureA::utiliserBoutonStopA()
 {

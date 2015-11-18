@@ -1,4 +1,4 @@
-#include "EtatV.hpp"
+#include "etatV.hpp"
 
 class EtatArretV : public EtatV
 {
@@ -7,6 +7,7 @@ class EtatArretV : public EtatV
 
 	public:
 		EtatArretV();
+		EtatArretV(Video* v);
 		void utiliserBoutonLectureV();
 		void afficherV();
 };

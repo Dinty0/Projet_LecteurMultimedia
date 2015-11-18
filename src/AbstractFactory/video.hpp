@@ -6,7 +6,7 @@
 class Video : public Media
 {
 	private:
-		VideoInterfaceFactory _viFact;
+		InterfaceFactory* _viFact;
 		Interface _i;
 		//...
 	public:

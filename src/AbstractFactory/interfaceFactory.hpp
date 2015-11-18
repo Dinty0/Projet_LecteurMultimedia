@@ -1,4 +1,4 @@
-/**
+ /**
  * @file interfaceFactory.hpp
  * @author K.Gomes / K.Espasa
  * 
@@ -20,7 +20,7 @@ class InterfaceFactory
 		 * @return Une Interface
 		 *
 		 */
-		Interface createInterface(Buttons* b, Format* f);
+		virtual Interface createInterface(Buttons* b, Format* f)=0; //{std::cout << "aie" << std::endl;}
 };
 
 #endif

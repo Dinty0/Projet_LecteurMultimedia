@@ -8,7 +8,7 @@ Audio::Audio()
 {
 	ButtonsVA* bva;
 	FormatSmall* fs;
-	_i = _aiFact.createInterface(bva,fs);
+	_i = _aiFact->createInterface(bva,fs);
 }
 
 void Audio::afficher()

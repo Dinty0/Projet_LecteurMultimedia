@@ -19,6 +19,8 @@ ButtonsVA::ButtonsVA(tgui::Button::Ptr bpl, tgui::Button::Ptr bpa, tgui::Button:
 tgui::Button::Ptr ButtonsVA::getButtonPl() { return _bpl; }
 tgui::Button::Ptr ButtonsVA::getButtonPa() { return _bpa; }
 tgui::Button::Ptr ButtonsVA::getButtonSt() { return _bst; }
+tgui::Button::Ptr ButtonsVA::getButtonNI() {}
+tgui::Button::Ptr ButtonsVA::getButtonPI() {}
 
 void ButtonsVA::createButtons() 
 {

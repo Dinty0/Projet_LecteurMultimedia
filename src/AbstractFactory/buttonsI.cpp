@@ -16,6 +16,10 @@ ButtonsI::ButtonsI(tgui::Button::Ptr bni, tgui::Button::Ptr bpi)
 
 tgui::Button::Ptr ButtonsI::getButtonNI() { return _bni; }
 tgui::Button::Ptr ButtonsI::getButtonPI() { return _bpi; }
+tgui::Button::Ptr ButtonsI::getButtonPl() {}
+tgui::Button::Ptr ButtonsI::getButtonPa() {}
+tgui::Button::Ptr ButtonsI::getButtonSt() {}
+
 
 void ButtonsI::createButtons() 
 {

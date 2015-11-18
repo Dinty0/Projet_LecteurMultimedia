@@ -3,6 +3,11 @@
 EtatArretA::EtatArretA()
 {}
 
+EtatArretA::EtatArretA(Audio* a)
+{
+	_audio = a;
+}
+
 void EtatArretA::utiliserBoutonLectureA()
 {
 	// COMMANDE SFML/VLC 

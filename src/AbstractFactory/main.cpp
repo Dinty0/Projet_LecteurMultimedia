@@ -59,8 +59,11 @@ int main()
         {
             if (callback.id == 1)
             {            
+                std::cout << "creation vid" << std::endl;
                 Video vid;
+                std::cout << "affich vid" << std::endl;
                 vid.afficher();
+                std::cout << "vid done" << std::endl;
             }
           else if (callback.id == 2)
             {

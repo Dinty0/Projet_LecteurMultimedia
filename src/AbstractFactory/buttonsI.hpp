@@ -45,6 +45,10 @@ class ButtonsI : public Buttons
 		 *
 		 */
 		tgui::Button::Ptr getButtonPI();
+
+		tgui::Button::Ptr getButtonPl();
+		tgui::Button::Ptr getButtonPa();
+		tgui::Button::Ptr getButtonSt();
 		
 		/*
 		 * @brief Crée les boutons de type "image" et les stockent dans un vecteur

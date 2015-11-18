@@ -6,7 +6,7 @@ FormatBig::FormatBig()
 	_largeurLecteur = 1080;
 }
 
-FormatBig FormatBig::createFormat()
+Format* FormatBig::createFormat()
 {
 	//Use library with _lo,_la
 }

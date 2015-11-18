@@ -7,6 +7,7 @@ class EtatLectureA : public EtatA
 
 	public:
 		EtatLectureA();
+		EtatLectureA(Audio* a);
 		void utiliserBoutonStopA();
 		void utiliserBoutonPauseA();
 		void afficherA();

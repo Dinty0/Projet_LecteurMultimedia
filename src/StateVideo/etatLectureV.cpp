@@ -1,7 +1,11 @@
-#include "EtatLectureV.hpp"
+#include "etatLectureV.hpp"
 
-EtatLectureV::EtatLectureV()
-{}
+EtatLectureV::EtatLectureV(){}
+
+EtatLectureV::EtatLectureV(Video* v)
+{
+	_video = v;
+}
 
 void EtatLectureV::utiliserBoutonStopV()
 {

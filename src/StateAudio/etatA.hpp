@@ -8,7 +8,6 @@ class Audio;
 class EtatA
 {
 	public:
-		EtatA();
 		void utiliserBoutonStopA();
 		void utiliserBoutonPauseA();
 		void utiliserBoutonLectureA();

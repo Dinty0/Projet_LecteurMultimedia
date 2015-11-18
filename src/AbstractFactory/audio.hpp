@@ -6,7 +6,7 @@
 class Audio : public Media
 {
 	private:
-		AudioInterfaceFactory _aiFact;
+		InterfaceFactory* _aiFact;
 		Interface _i;
 		//...
 	public:

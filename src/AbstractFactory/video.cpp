@@ -7,7 +7,10 @@ Video::Video()
 {
 	ButtonsVA* bva;
 	FormatBig* fb;
-	_i = _viFact.createInterface(bva,fb);
+	std::cout << "vifact->Interface" << std::endl;
+	VideoInterfaceFactory fact();
+	_viFact = &(fact);
+	_i = _viFact->createInterface(bva,fb);
 }
 
 void Video::afficher()

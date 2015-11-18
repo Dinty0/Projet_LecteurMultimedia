@@ -1,7 +1,11 @@
 #include "etatPauseA.hpp"
 
-EtatPauseA::EtatPauseA()
-{}
+EtatPauseA::EtatPauseA(){}
+
+EtatPauseA::EtatPauseA(Audio* a)
+{
+	_audio = a;
+}
 
 void EtatPauseA::utiliserBoutonStopA()
 {

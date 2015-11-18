@@ -17,9 +17,9 @@ class Format
 		 * @return Un Format
 		 *
 		 */
-		Format createFormat();
-		int getLongueur();
-		int getLargeur();
+		virtual Format* createFormat()=0;
+		virtual int getLongueur()=0;
+		virtual int getLargeur()=0;
 };
 
 #endif

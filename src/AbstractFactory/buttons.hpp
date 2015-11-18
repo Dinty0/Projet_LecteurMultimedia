@@ -19,12 +19,12 @@ class Buttons
 		 * @return Un vecteur de boutons
 		 *
 		 */
-		void createButtons();
-		tgui::Button::Ptr getButtonNI();
-		tgui::Button::Ptr getButtonPI();
-		tgui::Button::Ptr getButtonPl();
-		tgui::Button::Ptr getButtonPa();
-		tgui::Button::Ptr getButtonSt();
+		virtual void createButtons()=0;
+		virtual tgui::Button::Ptr getButtonNI()=0;
+		virtual tgui::Button::Ptr getButtonPI()=0;
+		virtual tgui::Button::Ptr getButtonPl()=0;
+		virtual tgui::Button::Ptr getButtonPa()=0;
+		virtual tgui::Button::Ptr getButtonSt()=0;
 };
 
 #endif

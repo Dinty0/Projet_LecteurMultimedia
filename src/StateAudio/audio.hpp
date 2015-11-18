@@ -9,9 +9,9 @@ class Audio
 	private:
 		//...
 		EtatA* _etatCourant;
-		EtatArretA* _etatArret;
-		EtatLectureA* _etatLecture;
-		EtatPauseA* _etatPause;
+		EtatArretA _etatArret;
+		EtatLectureA _etatLecture;
+		EtatPauseA _etatPause;
 	public:
 		Audio();
 		EtatA* getEtatCourantA();

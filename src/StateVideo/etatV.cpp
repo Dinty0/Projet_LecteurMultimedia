@@ -1,6 +1,4 @@
-#include "EtatV.hpp"
-
-EtatV::EtatV(){}
+#include "etatV.hpp"
 
 void EtatV::utiliserBoutonStopV()
 {}

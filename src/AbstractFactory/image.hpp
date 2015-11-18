@@ -5,7 +5,7 @@
 class Image : public Media
 {
 	private:
-		ImageInterfaceFactory _iiFact;
+		InterfaceFactory* _iiFact;
 		Interface _i;
 		//...
 	public:

@@ -28,7 +28,7 @@ class FormatBig : public Format
 		 * @return Un Format
 		 *
 		 */
-		FormatBig createFormat();
+		Format* createFormat();
 
 		int getLongueur();
 		int getLargeur();

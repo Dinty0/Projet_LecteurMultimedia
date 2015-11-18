@@ -9,7 +9,7 @@ Image::Image()
 {
 	ButtonsI* bi;
 	FormatBig* fb;
-	_i = _iiFact.createInterface(bi,fb);
+	_i = _iiFact->createInterface(bi,fb);
 }
 
 void Image::afficher()

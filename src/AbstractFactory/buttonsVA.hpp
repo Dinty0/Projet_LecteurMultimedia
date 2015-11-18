@@ -51,6 +51,9 @@ class ButtonsVA : public Buttons
 		 *
 		 */
 		tgui::Button::Ptr getButtonSt();
+
+		tgui::Button::Ptr getButtonPI();
+		tgui::Button::Ptr getButtonNI();
 		
 		/*
 		 * @brief Crée les boutons de type "video / audio" et les stockent dans un vecteur

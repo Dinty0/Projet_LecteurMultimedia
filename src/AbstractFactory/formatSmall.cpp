@@ -6,7 +6,7 @@ FormatSmall::FormatSmall()
 	_largeurLecteur = 100;
 }
 
-FormatSmall FormatSmall::createFormat()
+Format* FormatSmall::createFormat()
 {
 	//Use library
 }
