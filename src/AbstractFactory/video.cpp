@@ -5,8 +5,8 @@
 #include "formatBig.hpp"
 Video::Video()
 {
-	ButtonsVA bva;
-	FormatBig fb;
+	ButtonsVA* bva;
+	FormatBig* fb;
 	_i = _viFact.createInterface(bva,fb);
 }
 

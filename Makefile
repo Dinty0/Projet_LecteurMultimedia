@@ -6,14 +6,14 @@ IDIR=include
 IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
 LIBDIR=lib
 LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
-CXXFLAGS=-std=c++11 -c  $(IDIRFLAG)
+CXXFLAGS=-std=c++11 -c -g $(IDIRFLAG)
 SFMLFLAG= -lGLEW -lavcodec -lavdevice -lavfilter -lavformat -lavutil -lswresample -lswscale -lsfeMovie -ltgui -lsfml-window -lsfml-system -lsfml-graphics $(LIBDIRFLAG)
 
 # Linker
 LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Directories
-SRCDIR=src
+SRCDIR=src/AbstractFactory
 OBJDIR=obj
 BINDIR=bin
 

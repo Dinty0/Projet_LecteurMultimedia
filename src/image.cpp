@@ -3,12 +3,12 @@
 
 #include "buttonsI.hpp"
 #include "formatBig.hpp"
-#define THEME_CONFIG_FILE "widgets/Black.conf"
+#define THEME_CONFIG_FILE "src/widgets/Black.conf"
 
 Image::Image()
 {
-	ButtonsI* bi;
-	FormatBig* fb;
+	ButtonsI bi;
+	FormatBig fb;
 	_i = _iiFact.createInterface(bi,fb);
 }
 
@@ -19,15 +19,15 @@ void Image::afficher()
 
 void Image::run()
 {
-    sf::RenderWindow window(sf::VideoMode(_i.getFormat()->getLongueur(), _i.getFormat()->getLargeur()), "Lecteur Image");
-    //sf::RenderWindow window(sf::VideoMode(1200, 1080), "Lecteur Image");
+	sf::RenderWindow window(sf::VideoMode(_i.getFormat().getLongueur(), _i.getFormat().getLargeur()), "Lecteur Image");
+	//sf::RenderWindow window(sf::VideoMode(1200, 1080), "Lecteur Image");
     tgui::Gui gui(window);
     tgui::Callback callback;
 
     
-    tgui::Button::Ptr bni = _i.getButtons()->getButtonNI();
-    tgui::Button::Ptr bpi = _i.getButtons()->getButtonPI();
-    
+    tgui::Button::Ptr bni = _i.getButtons().getButtonNI();
+    tgui::Button::Ptr bpi = _i.getButtons().getButtonPI();
+	
 
 	while (window.isOpen())
     {

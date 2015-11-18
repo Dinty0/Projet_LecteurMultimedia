@@ -4,13 +4,13 @@
 #include <TGUI/TGUI.hpp>
 VideoInterfaceFactory::VideoInterfaceFactory(){}
 
-Interface VideoInterfaceFactory::createInterface(ButtonsVA bva, FormatBig fb)
+Interface VideoInterfaceFactory::createInterface(ButtonsVA* bva, FormatBig* fb)
 {
 	// Création des boutons
-	bva.createButtons();
+	bva->createButtons();
 
 	// Création du format
-	fb.createFormat();
+	fb->createFormat();
 	Interface i(bva,fb);
 	return i;
 }

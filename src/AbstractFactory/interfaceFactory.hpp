@@ -20,7 +20,7 @@ class InterfaceFactory
 		 * @return Une Interface
 		 *
 		 */
-		Interface createInterface(Media m);
+		Interface createInterface(Buttons* b, Format* f);
 };
 
 #endif

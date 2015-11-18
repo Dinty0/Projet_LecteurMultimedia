@@ -15,8 +15,8 @@
 class Interface
 {
 	private:
-		Buttons _b;
-		Format _f;
+		Buttons* _b;
+		Format* _f;
 	public:		
 		/**
 		 * @brief Constructeur
@@ -27,10 +27,10 @@ class Interface
 		 * @brief Constructeur
 		 * 
 		 */
-		Interface(Buttons b, Format f);
+		Interface(Buttons* b, Format* f);
 
-		Buttons getButtons();
-		Format getFormat();
+		Buttons* getButtons();
+		Format* getFormat();
 
 };
 

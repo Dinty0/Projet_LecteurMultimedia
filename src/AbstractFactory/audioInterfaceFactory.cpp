@@ -1,13 +1,13 @@
 #include "audioInterfaceFactory.hpp"
 
-Interface AudioInterfaceFactory::createInterface(ButtonsVA bva, FormatSmall fs)
+Interface AudioInterfaceFactory::createInterface(ButtonsVA* bva, FormatSmall* fs)
 {
 
 	// Création des boutons
-	bva.createButtons();
+	bva->createButtons();
 
 	// Création du format
-	fs.createFormat();
+	fs->createFormat();
 
 	
 	Interface i(bva,fs);

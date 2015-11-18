@@ -6,8 +6,8 @@
 
 Audio::Audio()
 {
-	ButtonsVA bva;
-	FormatSmall fs;
+	ButtonsVA* bva;
+	FormatSmall* fs;
 	_i = _aiFact.createInterface(bva,fs);
 }
 

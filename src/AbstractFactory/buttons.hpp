@@ -8,6 +8,9 @@
 #ifndef BUTTONS_H
 #define BUTTONS_H
 
+#include <SFML/Graphics.hpp>
+#include <TGUI/TGUI.hpp>
+
 class Buttons
 {
 	public:
@@ -17,6 +20,11 @@ class Buttons
 		 *
 		 */
 		void createButtons();
+		tgui::Button::Ptr getButtonNI();
+		tgui::Button::Ptr getButtonPI();
+		tgui::Button::Ptr getButtonPl();
+		tgui::Button::Ptr getButtonPa();
+		tgui::Button::Ptr getButtonSt();
 };
 
 #endif

@@ -22,7 +22,7 @@ class AudioInterfaceFactory : public InterfaceFactory
 		 * @param ButtonsVA bva, FormatSmall fs
 		 * @return Interface audio
 		 */
-		Interface createInterface(ButtonsVA bva, FormatSmall fs);
+		Interface createInterface(ButtonsVA* bva, FormatSmall* fs);
 };
 
 #endif
