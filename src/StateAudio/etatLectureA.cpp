@@ -1,4 +1,4 @@
-#include "EtatLectureA.hpp"
+#include "etatLectureA.hpp"
 
 EtatLectureA::EtatLectureA()
 {}

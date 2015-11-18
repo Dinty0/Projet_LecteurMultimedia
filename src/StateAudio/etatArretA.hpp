@@ -1,4 +1,4 @@
-#include "EtatA.hpp"
+#include "etatA.hpp"
 
 class EtatArretA : public EtatA
 {

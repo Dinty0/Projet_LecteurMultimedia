@@ -1,4 +1,4 @@
-#include "EtatA.hpp"
+#include "etatA.hpp"
 
 EtatA::EtatA()
 {}
@@ -11,3 +11,8 @@ void EtatA::utiliserBoutonPauseA()
 
 void EtatA::utiliserBoutonLectureA()
 {}
+
+void EtatA::afficherA()
+{
+	std::cout << "EtatA :: afficher" << std::endl;
+}

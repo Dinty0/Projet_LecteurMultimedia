@@ -13,7 +13,7 @@ SFMLFLAG= -lGLEW -lavcodec -lavdevice -lavfilter -lavformat -lavutil -lswresampl
 LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Directories
-SRCDIR=src/AbstractFactory
+SRCDIR=src/StateAudio
 OBJDIR=obj
 BINDIR=bin
 
@@ -71,4 +71,3 @@ $(OBJDIR)/%.o: %.cpp
 
 clean:
 	rm -fr core *~ $(OBJECTS) $(BINDIR)/$(EXEC) $(SOURCESTILDE) $(INCLUDESTILDE)
-

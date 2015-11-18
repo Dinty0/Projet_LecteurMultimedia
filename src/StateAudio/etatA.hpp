@@ -1,5 +1,8 @@
 #include <iostream>
 
+#ifndef ETATA_H
+#define ETATA_H
+
 class Audio;
 
 class EtatA
@@ -11,3 +14,5 @@ class EtatA
 		void utiliserBoutonLectureA();
 		virtual void afficherA()=0;
 };
+
+#endif

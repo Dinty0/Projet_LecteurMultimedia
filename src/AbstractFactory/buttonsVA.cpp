@@ -22,11 +22,7 @@ tgui::Button::Ptr ButtonsVA::getButtonSt() { return _bst; }
 
 void ButtonsVA::createButtons() 
 {
-    sf::RenderWindow window(sf::VideoMode(600, 100), "Lecteur multimedia");
-    tgui::Gui gui(window);
-    tgui::Callback callback;
-
-    tgui::Button::Ptr buttonPlay(gui);
+    tgui::Button::Ptr buttonPlay;
     buttonPlay->load(THEME_CONFIG_FILE);
     buttonPlay->setPosition(0, 0);
     buttonPlay->setText("Play");
@@ -35,7 +31,7 @@ void ButtonsVA::createButtons()
     buttonPlay->setSize(100, 100);
     _bpl = buttonPlay;
     
-    tgui::Button::Ptr buttonPause(gui);
+    tgui::Button::Ptr buttonPause;
     buttonPause->load(THEME_CONFIG_FILE);
     buttonPause->setPosition(200, 0);
     buttonPause->setText("Pause");
@@ -44,7 +40,7 @@ void ButtonsVA::createButtons()
     buttonPause->setSize(100, 100);
     _bpa = buttonPause;
 
-    tgui::Button::Ptr buttonStop(gui);
+    tgui::Button::Ptr buttonStop;
     buttonStop->load(THEME_CONFIG_FILE);
     buttonStop->setPosition(400, 0);
     buttonStop->setText("Image");

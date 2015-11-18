@@ -1,4 +1,4 @@
-#include "EtatPauseA.hpp"
+#include "etatPauseA.hpp"
 
 EtatPauseA::EtatPauseA()
 {}
