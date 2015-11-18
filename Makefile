@@ -13,7 +13,7 @@ SFMLFLAG= -lGLEW -lavcodec -lavdevice -lavfilter -lavformat -lavutil -lswresampl
 LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Directories
-SRCDIR=src src/StateVideo src/StateAudio 
+SRCDIR=src/AbstractFactory
 OBJDIR=obj
 BINDIR=bin
 
