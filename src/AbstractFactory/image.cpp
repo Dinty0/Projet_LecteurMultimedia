@@ -5,11 +5,11 @@
 #include "formatBig.hpp"
 #define THEME_CONFIG_FILE "widgets/Black.conf"
 
-Image::Image()
+Image::Image(ImageInterfaceFactory* iiFact)
 {
 	ButtonsI* bi;
 	FormatBig* fb;
-	_i = _iiFact->createInterface(bi,fb);
+	_i = iiFact->createInterface(bi,fb);
 }
 
 void Image::afficher()

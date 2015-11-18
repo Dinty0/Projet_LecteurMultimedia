@@ -58,9 +58,11 @@ int main()
         while (gui.pollCallback(callback))
         {
             if (callback.id == 1)
-            {            
+            {           
+                VideoInterfaceFactory* vidFactory;
+                //iFactory = new VideoInterfaceFactory();
                 std::cout << "creation vid" << std::endl;
-                Video vid;
+                Video vid(vidFactory);
                 std::cout << "affich vid" << std::endl;
                 vid.afficher();
                 std::cout << "vid done" << std::endl;
@@ -76,9 +78,14 @@ int main()
             }
             else if (callback.id == 3)
             {
-                Image img;
+                ImageInterfaceFactory* imgFactory;
+                //iFactory = new ImageInterfaceFactory();
+                std::cout << "creation img" << std::endl;
+                Image img(imgFactory);
+                std::cout << "affich img" << std::endl;
                 img.afficher();
-                img.run();
+                std::cout << "vid done" << std::endl;
+                //img.run();
             }
         
     }

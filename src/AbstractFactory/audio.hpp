@@ -6,11 +6,11 @@
 class Audio : public Media
 {
 	private:
-		InterfaceFactory* _aiFact;
 		Interface _i;
 		//...
 	public:
-		Audio();
+
+		Audio(AudioInterfaceFactory* aiFact);
 		void afficher();
 
 };

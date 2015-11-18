@@ -5,11 +5,10 @@
 class Image : public Media
 {
 	private:
-		InterfaceFactory* _iiFact;
 		Interface _i;
 		//...
 	public:
-		Image();
+		Image(ImageInterfaceFactory* iiFact);
 		void afficher();
 		void run();
 

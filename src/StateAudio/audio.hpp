@@ -1,4 +1,3 @@
-
 #include "etatA.hpp"
 #include "etatArretA.hpp"
 #include "etatLectureA.hpp"

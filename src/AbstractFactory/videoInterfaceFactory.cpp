@@ -2,6 +2,8 @@
 
 #include <SFML/Graphics.hpp>
 #include <TGUI/TGUI.hpp>
+
+
 VideoInterfaceFactory::VideoInterfaceFactory(){}
 
 Interface VideoInterfaceFactory::createInterface(ButtonsVA* bva, FormatBig* fb)

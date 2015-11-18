@@ -4,11 +4,11 @@
 #include "buttonsVA.hpp"
 #include "formatSmall.hpp"
 
-Audio::Audio()
+Audio::Audio(AudioInterfaceFactory* aiFact)
 {
 	ButtonsVA* bva;
 	FormatSmall* fs;
-	_i = _aiFact->createInterface(bva,fs);
+	_i = aiFact->createInterface(bva,fs);
 }
 
 void Audio::afficher()

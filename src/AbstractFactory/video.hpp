@@ -6,11 +6,11 @@
 class Video : public Media
 {
 	private:
-		InterfaceFactory* _viFact;
 		Interface _i;
 		//...
 	public:
 		Video();
+		Video(VideoInterfaceFactory* viFact);
 		void afficher();
 
 };

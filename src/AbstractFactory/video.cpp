@@ -3,14 +3,11 @@
 
 #include "buttonsVA.hpp"
 #include "formatBig.hpp"
-Video::Video()
+Video::Video(VideoInterfaceFactory* viFact)
 {
 	ButtonsVA* bva;
 	FormatBig* fb;
-	std::cout << "vifact->Interface" << std::endl;
-	VideoInterfaceFactory fact();
-	_viFact = &(fact);
-	_i = _viFact->createInterface(bva,fb);
+	_i = viFact->createInterface(bva,fb);
 }
 
 void Video::afficher()
