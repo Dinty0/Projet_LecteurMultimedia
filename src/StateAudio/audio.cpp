@@ -13,28 +13,43 @@ Audio::Audio()
 
 }
 
-EtatA* Audio::getEtatCourantA()
+EtatA* Audio::getEtatCourant()
 {
 	return _etatCourant;
 }
 
-EtatLectureA* Audio::getEtatLectureA()
+EtatLectureA* Audio::getEtatLecture()
 {
 	return &_etatLecture;
 }
 
-EtatPauseA* Audio::getEtatPauseA()
+EtatPauseA* Audio::getEtatPause()
 {
 	return &_etatPause; 
 }
 
-EtatArretA* Audio::getEtatArretA()
+EtatArretA* Audio::getEtatArret()
 {
 	return &_etatArret;
 }
 
-void Audio::setEtatA(EtatA* ea)
+void Audio::setEtat(EtatA* ea)
 {
 	_etatCourant = ea;
 	_etatCourant->afficherA();
+}
+
+void Audio::utiliserBoutonLecture()
+{
+	_etatCourant->utiliserBoutonLectureA();
+}
+
+void Audio::utiliserBoutonPause()
+{
+	_etatCourant->utiliserBoutonPauseA();
+}
+
+void Audio::utiliserBoutonStop()
+{
+	_etatCourant->utiliserBoutonStopA();
 }

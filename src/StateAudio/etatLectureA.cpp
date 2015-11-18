@@ -1,4 +1,5 @@
 #include "etatLectureA.hpp"
+#include "audio.hpp"
 
 EtatLectureA::EtatLectureA(){}
 
@@ -9,15 +10,15 @@ EtatLectureA::EtatLectureA(Audio* a)
 
 void EtatLectureA::utiliserBoutonStopA()
 {
-	// COMMANDE SFML/VLC AUDIO AU DEBUT ARRETEE
+	_audio->setEtat(_audio->getEtatArret());
 }
 
 void EtatLectureA::utiliserBoutonPauseA()
 {
-	// COMMANDE SMFL/VLC AUDIO PAUSE
+	_audio->setEtat(_audio->getEtatPause());
 }
 
 void EtatLectureA::afficherA()
 {
-	std::cout << "Audio dans l'état lecture" << std::endl;
+	std::cout << "Audio en lecture..." << std::endl;
 }

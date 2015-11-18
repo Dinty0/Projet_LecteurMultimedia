@@ -4,7 +4,14 @@
 int main()
 {
 	Audio aud;
-	aud.setEtatA(aud.getEtatLectureA());
-	aud.setEtatA(aud.getEtatPauseA());
-	aud.setEtatA(aud.getEtatArretA());
+	aud.utiliserBoutonLecture();
+	aud.utiliserBoutonLecture();
+	aud.utiliserBoutonPause();
+	aud.utiliserBoutonPause();
+	aud.utiliserBoutonLecture();
+	aud.utiliserBoutonStop();
+	aud.utiliserBoutonPause();
+	aud.utiliserBoutonLecture();
+	aud.utiliserBoutonPause();
+	aud.utiliserBoutonStop();
 }
