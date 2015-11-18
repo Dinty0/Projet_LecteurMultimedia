@@ -2,7 +2,7 @@
 EXEC=ghost
 
 # Compiler
-IDIR=include
+IDIR=include include/State
 IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
 LIBDIR=lib
 LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
@@ -13,7 +13,7 @@ SFMLFLAG= -lGLEW -lavcodec -lavdevice -lavfilter -lavformat -lavutil -lswresampl
 LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Directories
-SRCDIR=src/StateAudio
+SRCDIR=src src/StateVideo src/StateAudio 
 OBJDIR=obj
 BINDIR=bin
 

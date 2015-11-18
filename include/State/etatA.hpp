@@ -5,10 +5,10 @@
  * @brief Classe EtatA (abstraite), contenant les méthodes applicables à un audio
  */
 
-#include <iostream>
-
 #ifndef ETATA_H
 #define ETATA_H
+
+#include <iostream>
 
 class Audio;
 

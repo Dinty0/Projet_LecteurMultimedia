@@ -5,11 +5,10 @@
  * @brief Classe EtatLectureA, qui implémente les méthodes applicables à un audio dans l'état lecture
  */
 
-
-#include "etatA.hpp"
-
 #ifndef ETATLECTUREA_H
 #define ETATLECTUREA_H
+
+#include "etatA.hpp"
 
 class EtatLectureA : public EtatA
 {

@@ -1,4 +1,5 @@
 #include "etatPauseV.hpp"
+#include "video.hpp"
 
 EtatPauseV::EtatPauseV(){}
 
@@ -9,15 +10,15 @@ EtatPauseV::EtatPauseV(Video* v)
 
 void EtatPauseV::utiliserBoutonStopV()
 {
-	// COMMANDE SFML/VLC STOP
+	_video->setEtat(_video->getEtatArret());
 }
 
 void EtatPauseV::utiliserBoutonLectureV()
 {
-	// COMMANDE SFML/VLC REMETTRE LECTURE
+	_video->setEtat(_video->getEtatLecture());
 }
 
 void EtatPauseV::afficherV()
 {
-	std::cout << "Video dans l'état pause" << std::endl;
+	std::cout << "Video en pause." << std::endl;
 }

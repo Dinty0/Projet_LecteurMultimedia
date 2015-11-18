@@ -5,6 +5,9 @@
  * @brief Classe Audio, contenant les méthodes applicables à un audio
  */
 
+#ifndef AUDIO_H
+#define AUDIO_H
+
 #include "etatA.hpp"
 #include "etatArretA.hpp"
 #include "etatLectureA.hpp"
@@ -35,21 +38,21 @@ class Audio
 		/**
 		 * @brief Accesseur EtatLecture
 		 * 
-		 * @return EtatA : l'état lecture de l'audio
+		 * @return EtatLectureA* : pointeur sur l'état lecture de l'audio
 		 */
 		EtatLectureA* getEtatLecture();
 
 		/**
 		 * @brief Accesseur EtatPause
 		 * 
-		 * @return EtatA : l'état pause de l'audio
+		 * @return EtatPauseA* : pointeur sur l'état pause de l'audio
 		 */
 		EtatPauseA* getEtatPause();
 
 		/**
 		 * @brief Accesseur EtatArret
 		 * 
-		 * @return EtatA : l'état arret de l'audio
+		 * @return EtatArretA* : pointeur sur l'état arret de l'audio
 		 */
 		EtatArretA* getEtatArret();
 
@@ -61,21 +64,23 @@ class Audio
 		void setEtat(EtatA* ea);
 
 		/**
-		 * @brief utiliserBoutonLectureA : selon l'état passe la video dans l'état lecture
+		 * @brief utiliserBoutonLecture : selon l'état passe l'audio dans l'état lecture
 		 * 
 		 */
 		void utiliserBoutonLecture();
 
 		/**
-		 * @brief utiliserBoutonStopA : selon l'etat, effectue l'action du bouttonstop
+		 * @brief utiliserBoutonStop : selon l'etat, passe l'audio dans l'état arret
 		 * 
 		 */
 		void utiliserBoutonStop();
 
 		/**
-		 * @brief utiliserBoutonPauseA : selon l'etat, effectue l'action du bouttonpause
+		 * @brief utiliserBoutonPause : selon l'etat, effectue l'action du bouttonpause
 		 * 
 		 */
 		void utiliserBoutonPause();
 
 };
+
+#endif

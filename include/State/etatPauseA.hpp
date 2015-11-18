@@ -6,10 +6,10 @@
  */
 
 
-#include "etatA.hpp"
-
 #ifndef ETATPAUSEA_H
 #define ETATPAUSEA_H
+
+#include "etatA.hpp"
 
 class EtatPauseA : public EtatA
 {

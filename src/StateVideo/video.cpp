@@ -13,28 +13,43 @@ Video::Video()
 
 }
 
-EtatV* Video::getEtatCourantV()
+EtatV* Video::getEtatCourant()
 {
 	return _etatCourant;
 }
 
-EtatLectureV* Video::getEtatLectureV()
+EtatLectureV* Video::getEtatLecture()
 {
 	return &_etatLecture;
 }
 
-EtatPauseV* Video::getEtatPauseV()
+EtatPauseV* Video::getEtatPause()
 {
 	return &_etatPause; 
 }
 
-EtatArretV* Video::getEtatArretV()
+EtatArretV* Video::getEtatArret()
 {
 	return &_etatArret;
 }
 
-void Video::setEtatV(EtatV* ea)
+void Video::setEtat(EtatV* ev)
 {
-	_etatCourant = ea;
+	_etatCourant = ev;
 	_etatCourant->afficherV();
+}
+
+void Video::utiliserBoutonLecture()
+{
+	_etatCourant->utiliserBoutonLectureV();
+}
+
+void Video::utiliserBoutonPause()
+{
+	_etatCourant->utiliserBoutonPauseV();
+}
+
+void Video::utiliserBoutonStop()
+{
+	_etatCourant->utiliserBoutonStopV();
 }

@@ -5,10 +5,10 @@
  * @brief Classe EtatArretA, qui implémente les méthodes applicables à un audio dans l'état arret
  */
 
-#include "etatA.hpp"
-
 #ifndef ETATARRETA_H
 #define ETATARRETA_H
+
+#include "etatA.hpp"
 
 class EtatArretA : public EtatA
 {
