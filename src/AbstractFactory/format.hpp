@@ -23,7 +23,7 @@ class Format
 		virtual void createFormat()=0;
 		virtual int getLongueur()=0;
 		virtual int getLargeur()=0;
-		virtual sf::RenderWindow getWindow()=0;
+		virtual sf::RenderWindow* getWindow()=0;
 };
 
 #endif

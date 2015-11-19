@@ -8,16 +8,16 @@ VideoInterfaceFactory::VideoInterfaceFactory(){}
 
 Interface VideoInterfaceFactory::createInterface(Buttons* b, Format* f)
 {
-	// Création des boutons
-	std::cout << "creation butt" << std::endl;
-	b->createButtons();
-
 	// Création du format
-	std::cout << "creation for" << std::endl;
 	f->createFormat();
 
-	std::cout << "creation Interface" << std::endl;
-	Interface i(b,f);
+	// Création des boutons
+	tgui::Gui gui(*(f->getWindow()));
+	tgui::Gui* pgui = &gui;
+
+	b->createButtons(pgui);
+
+	Interface i(b,f,pgui);
 
 	return i;
 }

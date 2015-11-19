@@ -19,6 +19,7 @@ class Interface
 	private:
 		Buttons* _b;
 		Format* _f;
+		tgui::Gui* _gui;
 	public:		
 		/**
 		 * @brief Constructeur
@@ -29,10 +30,11 @@ class Interface
 		 * @brief Constructeur
 		 * 
 		 */
-		Interface(Buttons* b, Format* f);
+		Interface(Buttons* b, Format* f, tgui::Gui* gui);
 
 		Buttons* getButtons();
-		sf::RenderWindow getFormat();
+		Format* getFormat();
+		tgui::Gui* getGui();
 
 };
 

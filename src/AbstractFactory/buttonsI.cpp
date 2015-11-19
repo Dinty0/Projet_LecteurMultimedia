@@ -21,9 +21,10 @@ tgui::Button::Ptr ButtonsI::getButtonPa() {}
 tgui::Button::Ptr ButtonsI::getButtonSt() {}
 
 
-void ButtonsI::createButtons(tgui::Gui gui) 
+void ButtonsI::createButtons(tgui::Gui* gui) 
 {
-    tgui::Button::Ptr buttonNI(gui);
+    
+    tgui::Button::Ptr buttonNI(*gui);
     buttonNI->load(THEME_CONFIG_FILE);
     buttonNI->setPosition(0, 0);
     buttonNI->setText("Play");
@@ -33,7 +34,7 @@ void ButtonsI::createButtons(tgui::Gui gui)
     _bni = buttonNI;
     
 
-    tgui::Button::Ptr buttonPI(gui);
+    tgui::Button::Ptr buttonPI(*gui);
     buttonPI->load(THEME_CONFIG_FILE);
     buttonPI->setPosition(200, 0);
     buttonPI->setText("Pause");

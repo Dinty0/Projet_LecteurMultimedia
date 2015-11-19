@@ -24,21 +24,21 @@ void Image::run()
 
     tgui::Button::Ptr bni = _i.getButtons()->getButtonNI();
     tgui::Button::Ptr bpi = _i.getButtons()->getButtonPI();
-    
+    sf::RenderWindow* window = _i.getFormat()->getWindow();
 
-	while (_i.getWindow().isOpen())
+	while (_i.getFormat()->getWindow()->isOpen())
     {
         sf::Event event;
-        while (window.pollEvent(event))
+        while (window->pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
             {
-                window.close();
+                window->close();
             }
-            gui.handleEvent(event);
+            _i.getGui()->handleEvent(event);
         }
 
-        while (gui.pollCallback(callback))
+        while (_i.getGui()->pollCallback(callback))
         {
             if (callback.id == 1)
             {            
@@ -52,9 +52,8 @@ void Image::run()
             }
         }
     }
-    window.clear();
-    gui.draw();
-    window.display();
+    window->clear();
+    _i.getGui()->draw();
+    window->display();
 
-    }
 }

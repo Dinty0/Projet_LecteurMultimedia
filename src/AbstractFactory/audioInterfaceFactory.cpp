@@ -1,15 +1,17 @@
 #include "audioInterfaceFactory.hpp"
 
-Interface AudioInterfaceFactory::createInterface(ButtonsVA* bva, FormatSmall* fs)
+Interface AudioInterfaceFactory::createInterface(Buttons* b, Format* f)
 {
-/*
-	// Création des boutons
-	bva->createButtons();
-
 	// Création du format
-	fs->createFormat();
+	f->createFormat();
 
-*/
-	Interface i(bva,fs);
+	// Création des boutons
+
+	tgui::Gui gui(*(f->getWindow()));
+	tgui::Gui* pgui = &gui;
+
+	b->createButtons(pgui);
+
+	Interface i(b,f,pgui);
 	return i;
 }

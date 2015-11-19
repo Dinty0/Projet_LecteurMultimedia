@@ -15,7 +15,7 @@ class FormatSmall : public Format
 	private:
 		int _longueurLecteur;
 		int _largeurLecteur;
-		sf::RenderWindow _window;
+		sf::RenderWindow* _window;
 	public:
 		
 		/**
@@ -33,7 +33,7 @@ class FormatSmall : public Format
 
 		int getLongueur();
 		int getLargeur();
-		sf::RenderWindow getWindow();
+		sf::RenderWindow* getWindow();
 };
 
 #endif

@@ -5,10 +5,11 @@ Interface::Interface()
 	
 }
 
-Interface::Interface(Buttons* b, Format* f)
+Interface::Interface(Buttons* b, Format* f, tgui::Gui* gui)
 {
 	_b = b;
 	_f = f;
+	_gui = gui;
 }
 
 Buttons* Interface::getButtons()
@@ -19,4 +20,9 @@ Buttons* Interface::getButtons()
 Format* Interface::getFormat()
 {
 	return _f;
+}
+
+tgui::Gui* Interface::getGui()
+{
+	return _gui;
 }

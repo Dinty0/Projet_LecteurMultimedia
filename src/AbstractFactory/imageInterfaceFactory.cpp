@@ -7,9 +7,9 @@ Interface ImageInterfaceFactory::createInterface(Buttons* b, Format* f)
 	f->createFormat();
 
 	// Création des boutons
-	tgui::Gui gui(f.getWindow());
-	b->createButtons(tgui::Gui gui);
+	tgui::Gui* gui = new tgui::Gui(*(f->getWindow()));
+	b->createButtons(gui);
 
-	Interface i(b,f);
+	Interface i(b,f,gui);
 	return i;
 }

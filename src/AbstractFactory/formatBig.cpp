@@ -8,7 +8,8 @@ FormatBig::FormatBig()
 
 void FormatBig::createFormat()
 {
-	sf::RenderWindow _window(sf::VideoMode(_longueurLecteur, _largeurLecteur), "Lecteur Image");
+	sf::RenderWindow window(sf::VideoMode(_longueurLecteur, _largeurLecteur), "Lecteur Image");
+	_window = &window;
 }
 
 int FormatBig::getLongueur()
@@ -21,7 +22,7 @@ int FormatBig::getLargeur()
 	return _largeurLecteur;
 }
 
-sf::RenderWindow FormatBig::getWindow()
+sf::RenderWindow* FormatBig::getWindow()
 {
 	return _window;
 }

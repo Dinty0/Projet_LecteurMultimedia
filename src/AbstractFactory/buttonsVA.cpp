@@ -22,10 +22,11 @@ tgui::Button::Ptr ButtonsVA::getButtonSt() { return _bst; }
 tgui::Button::Ptr ButtonsVA::getButtonNI() {}
 tgui::Button::Ptr ButtonsVA::getButtonPI() {}
 
-void ButtonsVA::createButtons(tgui::Gui gui) 
+void ButtonsVA::createButtons(tgui::Gui* gui) 
 {
+
     std::cout << "creation bplay" << std::endl;
-    tgui::Button::Ptr buttonPlay(gui);
+    tgui::Button::Ptr buttonPlay(*gui);
     buttonPlay->load(THEME_CONFIG_FILE);
     buttonPlay->setPosition(0, 0);
     buttonPlay->setText("Play");
@@ -35,7 +36,7 @@ void ButtonsVA::createButtons(tgui::Gui gui)
     _bpl = buttonPlay;
     
     std::cout << "creation bpause" << std::endl;
-    tgui::Button::Ptr buttonPause(gui);
+    tgui::Button::Ptr buttonPause(*gui);
     buttonPause->load(THEME_CONFIG_FILE);
     buttonPause->setPosition(200, 0);
     buttonPause->setText("Pause");
@@ -45,7 +46,7 @@ void ButtonsVA::createButtons(tgui::Gui gui)
     _bpa = buttonPause;
 
     std::cout << "creation bstop" << std::endl;
-    tgui::Button::Ptr buttonStop(gui);
+    tgui::Button::Ptr buttonStop(*gui);
     buttonStop->load(THEME_CONFIG_FILE);
     buttonStop->setPosition(400, 0);
     buttonStop->setText("Image");
