@@ -11,6 +11,8 @@
 #include <vector>
 #include "format.hpp"
 #include "buttons.hpp"
+#include <SFML/Graphics.hpp>
+#include <TGUI/TGUI.hpp>
 
 class Interface
 {
@@ -30,7 +32,7 @@ class Interface
 		Interface(Buttons* b, Format* f);
 
 		Buttons* getButtons();
-		Format* getFormat();
+		sf::RenderWindow getFormat();
 
 };
 

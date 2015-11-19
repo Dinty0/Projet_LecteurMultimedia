@@ -7,8 +7,8 @@
 
 Image::Image(ImageInterfaceFactory* iiFact)
 {
-	ButtonsI* bi;
-	FormatBig* fb;
+    FormatBig* fb = new FormatBig();
+	ButtonsI* bi = new ButtonsI();
 	_i = iiFact->createInterface(bi,fb);
 }
 
@@ -19,17 +19,14 @@ void Image::afficher()
 
 void Image::run()
 {
-    sf::RenderWindow window(sf::VideoMode(_i.getFormat()->getLongueur(), _i.getFormat()->getLargeur()), "Lecteur Image");
-    //sf::RenderWindow window(sf::VideoMode(1200, 1080), "Lecteur Image");
-    tgui::Gui gui(window);
+
     tgui::Callback callback;
 
-    
     tgui::Button::Ptr bni = _i.getButtons()->getButtonNI();
     tgui::Button::Ptr bpi = _i.getButtons()->getButtonPI();
     
 
-	while (window.isOpen())
+	while (_i.getWindow().isOpen())
     {
         sf::Event event;
         while (window.pollEvent(event))
@@ -53,12 +50,7 @@ void Image::run()
                 //changer image suivante
             	std::cout << "Je veux aller a l'image suivante" << std::endl;
             }
-            else if (callback.id == 3)
-            {
-	        	//quitter (retour au menu ?)
-	        	std::cout << "Je veux quitter" << std::endl;
-            }
-        
+        }
     }
     window.clear();
     gui.draw();

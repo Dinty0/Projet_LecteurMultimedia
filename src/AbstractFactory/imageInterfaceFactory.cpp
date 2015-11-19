@@ -1,12 +1,15 @@
 #include "imageInterfaceFactory.hpp"
 
-Interface ImageInterfaceFactory::createInterface(ButtonsI* bi, FormatBig* fb)
+Interface ImageInterfaceFactory::createInterface(Buttons* b, Format* f)
 {
-	// Création des boutons
-	bi->createButtons();
 
 	// Création du format
-	fb->createFormat();
-	Interface i(bi,fb);
+	f->createFormat();
+
+	// Création des boutons
+	tgui::Gui gui(f.getWindow());
+	b->createButtons(tgui::Gui gui);
+
+	Interface i(b,f);
 	return i;
 }

@@ -20,7 +20,7 @@ class ImageInterfaceFactory : public InterfaceFactory
 		 * @brief Crée l'interface adéquate à la lecture d'un fichier image
 		 * @param ButtonsI bi, FormatBig fb
 		 */
-		Interface createInterface(ButtonsI* bi, FormatBig* fb);
+		Interface createInterface(Buttons* b, Format* f);
 };
 
 #endif

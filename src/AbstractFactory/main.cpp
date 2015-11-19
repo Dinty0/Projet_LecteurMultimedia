@@ -59,13 +59,9 @@ int main()
         {
             if (callback.id == 1)
             {           
-                VideoInterfaceFactory* vidFactory;
-                //iFactory = new VideoInterfaceFactory();
-                std::cout << "creation vid" << std::endl;
-                Video vid(vidFactory);
-                std::cout << "affich vid" << std::endl;
+                VideoInterfaceFactory* viFact = new VideoInterfaceFactory();
+                Video vid(viFact);
                 vid.afficher();
-                std::cout << "vid done" << std::endl;
             }
           else if (callback.id == 2)
             {
@@ -78,14 +74,10 @@ int main()
             }
             else if (callback.id == 3)
             {
-                ImageInterfaceFactory* imgFactory;
-                //iFactory = new ImageInterfaceFactory();
-                std::cout << "creation img" << std::endl;
-                Image img(imgFactory);
-                std::cout << "affich img" << std::endl;
+                ImageInterfaceFactory* iiFact = new ImageInterfaceFactory();
+                Image img(iiFact);
                 img.afficher();
-                std::cout << "vid done" << std::endl;
-                //img.run();
+                img.run();
             }
         
     }

@@ -6,9 +6,9 @@ FormatSmall::FormatSmall()
 	_largeurLecteur = 100;
 }
 
-Format* FormatSmall::createFormat()
+void FormatSmall::createFormat()
 {
-	//Use library
+	sf::RenderWindow _window(sf::VideoMode(_longueurLecteur, _largeurLecteur), "Lecteur Image");
 }
 
 int FormatSmall::getLongueur()
@@ -19,4 +19,9 @@ int FormatSmall::getLongueur()
 int FormatSmall::getLargeur()
 {
 	return _largeurLecteur;
+}
+
+sf::RenderWindow FormatSmall::getWindow()
+{
+	return _window;
 }

@@ -22,7 +22,7 @@ class VideoInterfaceFactory : public InterfaceFactory
 		 * @brief Crée l'interface adéquate à la lecture d'un fichier video
 		 * @param ButtonsVa bva, FormatBig fb
 		 */
-		Interface createInterface(ButtonsVA* bva, FormatBig* fb);
+		Interface createInterface(Buttons* b, Format* f);
 };
 
 #endif
