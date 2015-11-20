@@ -2,18 +2,18 @@
 EXEC=ghost
 
 # Compiler
-IDIR=include include/State
+IDIR=include 
 IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
 LIBDIR=lib
 LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
 CXXFLAGS=-std=c++11 -c -g $(IDIRFLAG)
-SFMLFLAG= -lGLEW -lopenal -lavcodec -lavdevice -lavfilter -lavformat -lavutil -lswresample -lswscale -lsfeMovie -ltgui -lsfml-window -lsfml-system -lsfml-graphics $(LIBDIRFLAG)
+SFMLFLAG= -lGLEW -lopenal -lavcodec -lavdevice -lavfilter -lavformat -lavutil -lswresample -lswscale -lsfeMovie -ltgui -lsfml-window -lsfml-system -lsfml-graphics -lsfml-audio $(LIBDIRFLAG)
 
 # Linker
 LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Directories
-SRCDIR=src
+SRCDIR=src src/AbstractFactory src/Observer
 OBJDIR=obj
 BINDIR=bin
 

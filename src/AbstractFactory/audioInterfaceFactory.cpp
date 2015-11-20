@@ -6,12 +6,11 @@ Interface AudioInterfaceFactory::createInterface(Buttons* b, Format* f)
 	f->createFormat();
 
 	// Création des boutons
+	tgui::Gui* gui = new tgui::Gui(*(f->getWindow()));
+	gui->setGlobalFont("src/fonts/DejaVuSans.ttf");
 
-	tgui::Gui gui(*(f->getWindow()));
-	tgui::Gui* pgui = &gui;
+	b->createButtons(gui);
 
-	b->createButtons(pgui);
-
-	Interface i(b,f,pgui);
+	Interface i(b,f,gui);
 	return i;
 }

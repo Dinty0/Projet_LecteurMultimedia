@@ -2,14 +2,12 @@
 #include <TGUI/TGUI.hpp>
 #include <sfeMovie/Movie.hpp>
 #include "dirent.h"
+#include <SFML/Audio.hpp>
 #define THEME_CONFIG_FILE "src/widgets/Black.conf"
-/*
+
 #include "AbstractFactory/video.hpp"
 #include "AbstractFactory/audio.hpp"
 #include "AbstractFactory/image.hpp"
-*/
-   
-
 
 int main()
 {    
@@ -66,19 +64,30 @@ int main()
         while (gui.pollCallback(callback))
         {
             if (callback.id == 1)
-            {            
-             //   Video vid;
-             //   vid.afficher();
-            }
-          else if (callback.id == 2)
             {
-                gui.removeAllWidgets();
-                window.create(sf::VideoMode(1000,1000), "Vidéo");
-                movie.play();
+                VideoInterfaceFactory* viFact = new VideoInterfaceFactory();
+                Video vid(viFact);
+                vid.afficher();
+                vid.run();
+            }
+            else if (callback.id == 2)
+            {
+                
+                AudioInterfaceFactory* aiFact = new AudioInterfaceFactory();
+                Audio aud(aiFact);
+                aud.afficher();
+                aud.run();
+                std::cout << "je joue le son" << std::endl;
 
             }
             else if (callback.id == 3)
             {
+
+                ImageInterfaceFactory* iiFact = new ImageInterfaceFactory();
+                Image img(iiFact);
+                img.afficher();
+                img.run();
+
                 /*
 				gui.removeAllWidgets();
 				dir=opendir("Ressource\\Image\\");
@@ -93,13 +102,12 @@ int main()
 				}
 				*/
 			}
-    } 
-    window.clear();
-    window.draw(movie);
+        } 
+        window.clear();
+        window.draw(movie);
 
-    gui.draw();
-    window.display();
-
+        gui.draw();
+        window.display();
     }
     return 0;
     

@@ -1,8 +1,6 @@
-#include "media.hpp"
-
 #include "imageInterfaceFactory.hpp"
 
-class Image : public Media
+class Image
 {
 	private:
 		Interface _i;

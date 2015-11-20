@@ -1,16 +1,13 @@
-#include "media.hpp"
-
 #include "audioInterfaceFactory.hpp"
 
-
-class Audio : public Media
+class Audio
 {
 	private:
 		Interface _i;
 		//...
 	public:
-
 		Audio(AudioInterfaceFactory* aiFact);
 		void afficher();
+		void run();
 
 };

@@ -19,13 +19,8 @@ void Image::afficher()
 
 void Image::run()
 {
-
     tgui::Callback callback;
 
-    tgui::Button::Ptr bni = _i.getButtons()->getButtonNI();
-    tgui::Button::Ptr bpi = _i.getButtons()->getButtonPI();
-
-    std::cout << bni->getText().getSize() << std::endl;
     tgui::Picture::Ptr picture(*(_i.getGui()));
     picture->load("src/fond-blanc.png");
 

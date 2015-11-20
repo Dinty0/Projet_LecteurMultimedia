@@ -2,16 +2,14 @@
 
 FormatSmall::FormatSmall()
 {
-	_longueurLecteur = 200;
-	_largeurLecteur = 100;
+	_longueurLecteur = 600;
+	_largeurLecteur = 200;
 }
 
 void FormatSmall::createFormat()
 {
-	sf::RenderWindow window(sf::VideoMode(_longueurLecteur, _largeurLecteur), "Lecteur Image");
-	_window = &window;
+	_window = new sf::RenderWindow(sf::VideoMode(_longueurLecteur,_largeurLecteur), "Lecteur musique");
 }
-
 int FormatSmall::getLongueur()
 {
 	return _longueurLecteur;

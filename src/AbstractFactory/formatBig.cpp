@@ -2,13 +2,13 @@
 
 FormatBig::FormatBig()
 {
-	_longueurLecteur = 800;
-	_largeurLecteur = 600;
+	_longueurLecteur =1000;
+	_largeurLecteur = 800;
 }
 
 void FormatBig::createFormat()
 {
-	_window = new sf::RenderWindow(sf::VideoMode(_longueurLecteur,_largeurLecteur), "Lecteur Image");
+	_window = new sf::RenderWindow(sf::VideoMode(_longueurLecteur,_largeurLecteur), "Grand format");
 }
 
 int FormatBig::getLongueur()

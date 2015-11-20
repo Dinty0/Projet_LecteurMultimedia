@@ -25,22 +25,22 @@ void ButtonsI::createButtons(tgui::Gui* gui)
 {
     tgui::Button::Ptr buttonPI(*gui);
     buttonPI->load(THEME_CONFIG_FILE);
-    buttonPI->setPosition(0, 0);
-    buttonPI->setText("Image précédente");
+    buttonPI->setPosition(0, 700);
+    buttonPI->setText("Image precedente");
     buttonPI->setCallbackId(1);
     buttonPI->bindCallback(tgui::Button::LeftMouseClicked);
     buttonPI->setSize(100, 100);
     _bpi = buttonPI;
+    gui->add(buttonPI,"buttonPI");
 
-    /*
+    
     tgui::Button::Ptr buttonNI(*gui);
     buttonNI->load(THEME_CONFIG_FILE);
-    buttonNI->setPosition(200, 0);
+    buttonNI->setPosition(800, 700);
     buttonNI->setText("Image suivante");
     buttonNI->setCallbackId(2);
     buttonNI->bindCallback(tgui::Button::LeftMouseClicked);
     buttonNI->setSize(100, 100);
     _bni = buttonNI;
-    */
-
+    gui->add(buttonNI,"buttonNI");
 }

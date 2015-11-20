@@ -9,7 +9,6 @@
 #define INTERFACEFACTORY_H
 
 #include "interface.hpp"
-#include "media.hpp"
 
 class InterfaceFactory
 {
@@ -20,7 +19,7 @@ class InterfaceFactory
 		 * @return Une Interface
 		 *
 		 */
-		virtual Interface createInterface(Buttons* b, Format* f)=0; //{std::cout << "aie" << std::endl;}
+		virtual Interface createInterface(Buttons* b, Format* f)=0;
 };
 
 #endif
