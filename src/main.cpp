@@ -17,11 +17,8 @@ int main()
     tgui::Gui gui(window);
     tgui::Callback callback;
     sfe::Movie movie;
-    
-    Dir *dir=NULL;
-    struct dirent *file;
-    
-    movie.openFromFile("mobile.ogg");
+
+    movie.openFromFile("ducks_take_off_444_720p25.ogg");
 	window.setVerticalSyncEnabled(true);     
 	
     if (gui.setGlobalFont("src/fonts/DejaVuSans.ttf") == false)
@@ -76,12 +73,13 @@ int main()
           else if (callback.id == 2)
             {
                 gui.removeAllWidgets();
-
+                window.create(sf::VideoMode(1000,1000), "Vidéo");
                 movie.play();
 
             }
             else if (callback.id == 3)
             {
+                /*
 				gui.removeAllWidgets();
 				dir=opendir("Ressource\\Image\\");
 				window.create(sf::VideoMode(800, 600), "dossier");
@@ -93,11 +91,11 @@ int main()
 				{
 					listBox->addItem(file->d_name);			
 				}
-				
+				*/
 			}
     } 
     window.clear();
-                    window.draw(movie);
+    window.draw(movie);
 
     gui.draw();
     window.display();

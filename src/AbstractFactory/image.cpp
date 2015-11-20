@@ -3,7 +3,7 @@
 
 #include "buttonsI.hpp"
 #include "formatBig.hpp"
-#define THEME_CONFIG_FILE "widgets/Black.conf"
+#define THEME_CONFIG_FILE "src/widgets/Black.conf"
 
 Image::Image(ImageInterfaceFactory* iiFact)
 {
@@ -24,16 +24,19 @@ void Image::run()
 
     tgui::Button::Ptr bni = _i.getButtons()->getButtonNI();
     tgui::Button::Ptr bpi = _i.getButtons()->getButtonPI();
-    sf::RenderWindow* window = _i.getFormat()->getWindow();
+
+    std::cout << bni->getText().getSize() << std::endl;
+    tgui::Picture::Ptr picture(*(_i.getGui()));
+    picture->load("src/fond-blanc.png");
 
 	while (_i.getFormat()->getWindow()->isOpen())
     {
         sf::Event event;
-        while (window->pollEvent(event))
+        while (_i.getFormat()->getWindow()->pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
             {
-                window->close();
+                _i.getFormat()->getWindow()->close();
             }
             _i.getGui()->handleEvent(event);
         }
@@ -51,9 +54,8 @@ void Image::run()
             	std::cout << "Je veux aller a l'image suivante" << std::endl;
             }
         }
+        _i.getFormat()->getWindow()->clear();
+        _i.getGui()->draw();
+        _i.getFormat()->getWindow()->display();
     }
-    window->clear();
-    _i.getGui()->draw();
-    window->display();
-
 }

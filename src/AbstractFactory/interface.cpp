@@ -1,5 +1,8 @@
 #include "interface.hpp"
 
+
+#define THEME_CONFIG_FILE "src/widgets/Black.conf"
+
 Interface::Interface()
 {
 	

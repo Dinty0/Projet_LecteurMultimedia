@@ -55,7 +55,7 @@ class ButtonsI : public Buttons
 		 * @return Un vecteur de boutons
 		 *
 		 */
-		void createButtons(tgui::Gui* gui);
+		tgui::Gui* createButtons(tgui::Gui* gui);
 };
 
 #endif

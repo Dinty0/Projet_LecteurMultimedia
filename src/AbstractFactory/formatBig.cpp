@@ -2,14 +2,13 @@
 
 FormatBig::FormatBig()
 {
-	_longueurLecteur = 1200;
-	_largeurLecteur = 1080;
+	_longueurLecteur = 800;
+	_largeurLecteur = 600;
 }
 
 void FormatBig::createFormat()
 {
-	sf::RenderWindow window(sf::VideoMode(_longueurLecteur, _largeurLecteur), "Lecteur Image");
-	_window = &window;
+	_window = new sf::RenderWindow(sf::VideoMode(_longueurLecteur,_largeurLecteur), "Lecteur Image");
 }
 
 int FormatBig::getLongueur()
@@ -23,6 +22,6 @@ int FormatBig::getLargeur()
 }
 
 sf::RenderWindow* FormatBig::getWindow()
-{
+{	    
 	return _window;
 }

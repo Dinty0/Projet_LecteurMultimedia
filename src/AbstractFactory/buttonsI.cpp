@@ -23,23 +23,24 @@ tgui::Button::Ptr ButtonsI::getButtonSt() {}
 
 void ButtonsI::createButtons(tgui::Gui* gui) 
 {
-    
-    tgui::Button::Ptr buttonNI(*gui);
-    buttonNI->load(THEME_CONFIG_FILE);
-    buttonNI->setPosition(0, 0);
-    buttonNI->setText("Play");
-    buttonNI->setCallbackId(1);
-    buttonNI->bindCallback(tgui::Button::LeftMouseClicked);
-    buttonNI->setSize(100, 100);
-    _bni = buttonNI;
-    
-
     tgui::Button::Ptr buttonPI(*gui);
     buttonPI->load(THEME_CONFIG_FILE);
-    buttonPI->setPosition(200, 0);
-    buttonPI->setText("Pause");
-    buttonPI->setCallbackId(2);
+    buttonPI->setPosition(0, 0);
+    buttonPI->setText("Image précédente");
+    buttonPI->setCallbackId(1);
     buttonPI->bindCallback(tgui::Button::LeftMouseClicked);
     buttonPI->setSize(100, 100);
     _bpi = buttonPI;
+
+    /*
+    tgui::Button::Ptr buttonNI(*gui);
+    buttonNI->load(THEME_CONFIG_FILE);
+    buttonNI->setPosition(200, 0);
+    buttonNI->setText("Image suivante");
+    buttonNI->setCallbackId(2);
+    buttonNI->bindCallback(tgui::Button::LeftMouseClicked);
+    buttonNI->setSize(100, 100);
+    _bni = buttonNI;
+    */
+
 }

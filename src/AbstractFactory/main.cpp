@@ -68,7 +68,7 @@ int main()
                 sfe::Movie movie;
                 gui.removeAllWidgets();
                 window.create(sf::VideoMode(800, 600), "Lecteur Video");
-                movie.openFromFile("src/drop.avi");
+                movie.openFromFile("ducks_take_off_444_720p25.avi");
                 movie.play();
 
             }
@@ -79,12 +79,10 @@ int main()
                 img.afficher();
                 img.run();
             }
-        
-    }
-    window.clear();
-    gui.draw();
-    window.display();
-
+        }
+        window.clear();
+        gui.draw();
+        window.display();
     }
     return 0;
 }
