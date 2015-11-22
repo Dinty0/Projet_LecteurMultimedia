@@ -1,23 +1,23 @@
-#ifndef SOUSTITRES_HPP
-#define SOUSTITRES_HPP
+#ifndef SUBTITLELINEOBS_HPP
+#define SUBTITLELINEOBS_HPP
 
 #include "Observer.hpp"
 
 
-class SousTitres : public Observer
+class SubtitleLineObs : public Observer
 {
 	private:
-			std::string donnee_;
-			Sujet *sujet_;
+			std::string _data;
+			Subject *_subject;
 
 	public:
 			/*
 			 * @brief Constructeur
 			 * @param le sujet a observer
 			 */
-			SousTitres(Sujet *s);
+			SubtitleLineObs(Subject *s);
 
-			void affichage();
+			std::string getData();
 			
 			/*
 			 * @brief mise a jour de la donnée

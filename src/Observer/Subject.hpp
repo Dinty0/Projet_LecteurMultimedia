@@ -5,13 +5,13 @@
  * @brief Classe Sujet
  */
 
-#ifndef SUJET_HPP
-#define SUJET_HPP
+#ifndef SUBJECT_HPP
+#define SUBJECT_HPP
 #include "Observer.hpp"
 #include <iostream>
 
 class Observer;
-class Sujet
+class Subject
 {
 	public:
 			/*
@@ -20,7 +20,7 @@ class Sujet
 			 * @return _retour 1 si l'observer a été ajouté
 			 *
 			 */
-			virtual int enregistrerObs(Observer* o)=0;
+			virtual int addObs(Observer* o)=0;
 
 			/*
 			 * @brief Supprime un Observer
@@ -28,13 +28,13 @@ class Sujet
 			 * @return _retour 1 si l'observer a été trouvé et supprimé sinon -1
 			 *
 			 */
-			virtual int supprimerObs(Observer* o)=0;
+			virtual int removeObs(Observer* o)=0;
 
 			/*
 			 * @brief Notifie l'ensemble des observers ajoutés à au vecteur
 			 *
 			 */
-			virtual void notifierObs()=0;
+			virtual void notifyObs()=0;
 
 };
 

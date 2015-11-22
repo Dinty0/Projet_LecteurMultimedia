@@ -1,51 +1,54 @@
-#ifndef FICHIERSOUSTITRES_HPP
-#define FICHIERSOUSTITRES_HPP
-#include "Sujet.hpp"
+#ifndef SUBTITLESUBJECT_HPP
+#define SUBTITLESUBJECT_HPP
+#include "Subject.hpp"
 #include <vector>
 #include <ctime>
 
 
-class FichierSousTitre : public Sujet
+class SubtitleSubject : public Subject
 {
 	private:
-		std::vector<Observer*> liste_;
-		std::string donnee_;
-		std::string deb_;
-		std::string fin_;
+		std::vector<Observer*> _list;
+		std::string _subtitleLine;
+		std::string _start;
+		std::string _end;
+		int _chrono;
 	public:	
-		FichierSousTitre();
+		SubtitleSubject();
 			/*
 			 * @brief Getteur
 			 * @return _retour la dernière donnée retirée du fichier en format txt.
 			 */	
-		std::string getDonnee();
+		std::string getData();
+			/*
+			 * @brief Setteur mettant à jour modifiant la data
+			 * @param la nouvelle data
+			 *
+			 */
+		void setData(std::string l);
 			/*
 			 * @brief Ajout un Observer
 			 * @param l'observer à ajouter
 			 * @return _retour 1 si l'observer a été ajouté
 			 *
 			 */
-		void setDonnee(std::string l);
-			/*
-			 * @brief Ajout un Observer
-			 * @param l'observer à ajouter
-			 * @return _retour 1 si l'observer a été ajouté
-			 *
-			 */
-		int enregistrerObs(Observer* o);
+		int addObs(Observer* o);
 			/*
 			 * @brief Supprime un Observer
 			 * @param l'observer à supprimer
 			 * @return _retour 1 si l'observer a été trouvé et supprimé sinon -1
 			 *
 			 */
-		int supprimerObs(Observer* o);
+		int removeObs(Observer* o);
 			/*
 			 * @brief Notifie l'ensemble des observers ajoutés à au vecteur
 			 *
 			 */
 		void notifierObs();
 		bool isDigit(std::string s);
+		void PlayChrono();
+		void PauseChrono();
+		void 
 
 };
 

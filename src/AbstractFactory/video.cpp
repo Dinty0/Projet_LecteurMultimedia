@@ -21,7 +21,8 @@ void Video::afficher()
 void Video::run()
 {
 	sfe::Movie movie;
-	movie.openFromFile("ducks_take_off_444_720p25.ogg");
+	movie.openFromFile("ressources/Video/elephants-dream.webm");
+    movie.play();
 
 	tgui::Callback callback;
 

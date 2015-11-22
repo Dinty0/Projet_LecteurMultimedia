@@ -11,12 +11,11 @@
 
 int main()
 {    
-    sf::RenderWindow window(sf::VideoMode(600, 100), "Lecteur multimedia");
+    sf::RenderWindow window(sf::VideoMode(600, 600), "Lecteur multimedia");
     tgui::Gui gui(window);
     tgui::Callback callback;
     sfe::Movie movie;
 
-    movie.openFromFile("ducks_take_off_444_720p25.ogg");
 	window.setVerticalSyncEnabled(true);     
 	
     if (gui.setGlobalFont("src/fonts/DejaVuSans.ttf") == false)

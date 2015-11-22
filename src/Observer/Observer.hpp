@@ -2,7 +2,7 @@
 #define OBSERVER_HPP
 #include <iostream>
 
-#include "Sujet.hpp"
+#include "Subject.hpp"
 
 class Observer
 {
