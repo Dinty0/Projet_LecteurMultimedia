@@ -18,6 +18,8 @@ class SubtitleLineObs : public Observer
 			SubtitleLineObs(Subject *s);
 
 			std::string getData();
+
+			void display();
 			
 			/*
 			 * @brief mise a jour de la donnée

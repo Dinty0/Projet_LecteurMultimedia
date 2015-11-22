@@ -11,7 +11,31 @@ Image::Image(ImageInterfaceFactory* iiFact)
     FormatBig* fb = new FormatBig();
 	ButtonsI* bi = new ButtonsI();
 	_i = iiFact->createInterface(bi,fb);
+    _chrono="00:00:00";
 
+}
+
+void Image::ChronoAddOne()
+{
+    if(_chrono.substr(6,2).compare("59"))
+    {
+        _chrono.substr(6,2)="00";
+        if(_chrono.substr(3,2).compare("59"))
+        {
+            _chrono.substr(3,2)="00";
+            _chrono.substr(0,2) = std::to_string(1+std::stoi(_chrono.substr(0,2)));
+        }
+        else
+        {
+            _chrono.substr(3,2) = std::to_string(1+std::stoi(_chrono.substr(3,2)));
+        }
+
+    }
+    else
+    {
+        _chrono.substr(6,2) = std::to_string(1+std::stoi(_chrono.substr(6,2)));
+
+    }
 }
 
 void Image::afficher()
@@ -30,6 +54,8 @@ void Image::run()
 
 	while (_i.getFormat()->getWindow()->isOpen())
     {
+        ChronoAddOne();
+        std::cout<<_chrono.substr(6,2).compare("00")<<std::endl;
         sf::Event event;
         while (_i.getFormat()->getWindow()->pollEvent(event))
         {

@@ -11,7 +11,8 @@
 SubtitleSubject::SubtitleSubject()
 {
 	_subtitleLine="";
-	_chrono=0;
+	_chrono="00:00:00";
+
 }
 
 int SubtitleSubject::addObs(Observer* o)
@@ -47,6 +48,29 @@ std::string SubtitleSubject::getData()
 	return _data;
 }
 
+void SubtitleSubject::ChronoAddOne()
+{
+	if(_chrono.substr(6,2).compare("59"))
+	{
+		_chrono.substr(6,2)="00";
+		if(_chrono.substr(3,2).compare("59"))
+		{
+			_chrono.substr(3,2)="00";
+			_chrono.substr(0,2) = std::to_string(1+std::stoi(_chrono.substr(0,2)));
+		}
+		else
+		{
+			_chrono.substr(3,2) = std::to_string(1+std::stoi(_chrono.substr(3,2)));
+		}
+
+	}
+	else
+	{
+		_chrono.substr(6,2) = std::to_string(1+std::stoi(_chrono.substr(6,2)));
+
+	}
+}
+
 
 bool SubtitleSubject::isDigit(std::string s)
 {
@@ -61,7 +85,7 @@ bool SubtitleSubject::isDigit(std::string s)
 
 }
 
-void SubtitleSubject::setdata(std::string name)
+void SubtitleSubject::setData(std::string name)
 {	
 	
 	std::ifstream file(name);

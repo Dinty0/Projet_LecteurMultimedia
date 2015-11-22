@@ -12,7 +12,7 @@ class SubtitleSubject : public Subject
 		std::string _subtitleLine;
 		std::string _start;
 		std::string _end;
-		int _chrono;
+		std::string _chrono;
 	public:	
 		SubtitleSubject();
 			/*
@@ -46,9 +46,8 @@ class SubtitleSubject : public Subject
 			 */
 		void notifierObs();
 		bool isDigit(std::string s);
-		void PlayChrono();
-		void PauseChrono();
-		void 
+		void ChronoAddOne();
+
 
 };
 
