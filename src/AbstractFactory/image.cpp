@@ -3,6 +3,7 @@
 
 #include "buttonsI.hpp"
 #include "formatBig.hpp"
+
 #define THEME_CONFIG_FILE "src/widgets/Black.conf"
 
 Image::Image(ImageInterfaceFactory* iiFact)
@@ -10,6 +11,7 @@ Image::Image(ImageInterfaceFactory* iiFact)
     FormatBig* fb = new FormatBig();
 	ButtonsI* bi = new ButtonsI();
 	_i = iiFact->createInterface(bi,fb);
+
 }
 
 void Image::afficher()
@@ -23,6 +25,8 @@ void Image::run()
 
     tgui::Picture::Ptr picture(*(_i.getGui()));
     picture->load("src/fond-blanc.png");
+    _dir.setFilesVector("ressources/Image");
+    _dir.createDirWidget(_i.getGui());
 
 	while (_i.getFormat()->getWindow()->isOpen())
     {
@@ -38,15 +42,33 @@ void Image::run()
 
         while (_i.getGui()->pollCallback(callback))
         {
-            if (callback.id == 1)
+            if (callback.id == 0)
             {            
-                //changer image precedente
-                std::cout << "Je veux aller a l'image précédente" << std::endl;
+                //précédent
+               if(_dir.getItemSelected()==0)
+                {
+                    picture->load(_dir.returnPath(_dir.getFilesVector().size()-1));
+                }
+                else
+                {
+                    picture->load(_dir.returnPath(_dir.getItemSelected()-1));
+                }
             }
-          	else if (callback.id == 2)
+          	else if (callback.id == 1)
             {
-                //changer image suivante
-            	std::cout << "Je veux aller a l'image suivante" << std::endl;
+                // suivant
+                if(_dir.getItemSelected()>_dir.getFilesVector().size()-1)
+                {
+                    picture->load(_dir.returnPath(0));
+                }
+                else
+                {
+                    picture->load(_dir.returnPath(_dir.getItemSelected()+1));
+                }
+            }
+            else if(callback.id == 2)
+            {   
+                picture->load(_dir.returnPath(_dir.getItemSelected()));
             }
         }
         _i.getFormat()->getWindow()->clear();

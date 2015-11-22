@@ -27,7 +27,7 @@ void ButtonsI::createButtons(tgui::Gui* gui)
     buttonPI->load(THEME_CONFIG_FILE);
     buttonPI->setPosition(0, 700);
     buttonPI->setText("Image precedente");
-    buttonPI->setCallbackId(1);
+    buttonPI->setCallbackId(0);
     buttonPI->bindCallback(tgui::Button::LeftMouseClicked);
     buttonPI->setSize(100, 100);
     _bpi = buttonPI;
@@ -38,7 +38,7 @@ void ButtonsI::createButtons(tgui::Gui* gui)
     buttonNI->load(THEME_CONFIG_FILE);
     buttonNI->setPosition(800, 700);
     buttonNI->setText("Image suivante");
-    buttonNI->setCallbackId(2);
+    buttonNI->setCallbackId(1);
     buttonNI->bindCallback(tgui::Button::LeftMouseClicked);
     buttonNI->setSize(100, 100);
     _bni = buttonNI;

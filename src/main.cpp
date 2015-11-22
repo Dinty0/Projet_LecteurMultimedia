@@ -21,7 +21,7 @@ int main()
 	
     if (gui.setGlobalFont("src/fonts/DejaVuSans.ttf") == false)
         return 1;
-
+   
     tgui::Picture::Ptr picture(gui);
     picture->load("src/fond-blanc.png");
     
@@ -48,7 +48,7 @@ int main()
     buttonImg->setCallbackId(3);
     buttonImg->bindCallback(tgui::Button::LeftMouseClicked);
     buttonImg->setSize(100, 100);
-    
+ 
     while (window.isOpen())
     {
         sf::Event event;
@@ -87,20 +87,6 @@ int main()
                 Image img(iiFact);
                 img.afficher();
                 img.run();
-
-                /*
-				gui.removeAllWidgets();
-				dir=opendir("Ressource\\Image\\");
-				window.create(sf::VideoMode(800, 600), "dossier");
-				tgui::ListBox::Ptr listBox(gui);
-				listBox->load(THEME_CONFIG_FILE);
-				listBox->setSize(120, 21);
-				listBox->setPosition(210, 440);
-				while( (file=readdir(dir)) !=NULL)
-				{
-					listBox->addItem(file->d_name);			
-				}
-				*/
 			}
         } 
         window.clear();

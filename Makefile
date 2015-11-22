@@ -7,13 +7,13 @@ IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
 LIBDIR=lib
 LIBDIRFLAG =$(foreach libdir, $(LIBDIR), -L$(libdir))
 CXXFLAGS=-std=c++11 -c -g $(IDIRFLAG)
-SFMLFLAG= -lGLEW -lopenal -lavcodec -lavdevice -lavfilter -lavformat -lavutil -lswresample -lswscale -lsfeMovie -ltgui -lsfml-window -lsfml-system -lsfml-graphics -lsfml-audio $(LIBDIRFLAG)
+SFMLFLAG= -lboost_filesystem -lboost_system -lGLEW -lopenal -lavcodec -lavdevice -lavfilter -lavformat -lavutil -lswresample -lswscale -lsfeMovie -ltgui -lsfml-window -lsfml-system -lsfml-graphics -lsfml-audio $(LIBDIRFLAG)
 
 # Linker
 LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Directories
-SRCDIR=src src/AbstractFactory src/Observer
+SRCDIR=src src/AbstractFactory src/Dir
 OBJDIR=obj
 BINDIR=bin
 
