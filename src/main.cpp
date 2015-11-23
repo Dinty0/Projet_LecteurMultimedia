@@ -76,8 +76,6 @@ int main()
                 Audio aud(aiFact);
                 aud.afficher();
                 aud.run();
-                std::cout << "je joue le son" << std::endl;
-
             }
             else if (callback.id == 3)
             {

@@ -8,6 +8,8 @@
 #include "buttonsVA.hpp"
 #include "formatBig.hpp"
 
+#define THEME_CONFIG_FILE "src/widgets/Black.conf"
+
 #include "../StateVideo/etatV.hpp"
 #include "../StateVideo/etatArretV.hpp"
 #include "../StateVideo/etatLectureV.hpp"
@@ -83,6 +85,14 @@ void Video::run()
     _dir.setFilesVector("ressources/Video");
     _dir.createDirWidget(_i.getGui());
 
+    tgui::Button::Ptr buttonST(*(_i.getGui()));
+    buttonST->load(THEME_CONFIG_FILE);
+    buttonST->setPosition(880, 740);
+    buttonST->setText("CC");
+    buttonST->setCallbackId(4);
+    buttonST->bindCallback(tgui::Button::LeftMouseClicked);
+    buttonST->setSize(60, 60);
+
     _i.getGui()->get("buttonPlay")->setPosition(0,770);
     _i.getGui()->get("buttonPause")->setPosition(60,770);
     _i.getGui()->get("buttonStop")->setPosition(120,770);
@@ -116,6 +126,10 @@ void Video::run()
             else if (callback.id == 3)
             {
                 utiliserBoutonStop(&movie);
+            }
+            else if (callback.id == 4)
+            {
+
             }
             else if(callback.id==5){
                 movie.openFromFile(_dir.returnPath(_dir.getItemSelected()));

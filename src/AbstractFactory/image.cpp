@@ -61,7 +61,7 @@ void Image::run()
             else if (callback.id == 1)
             {
                 // suivant
-                if(_dir.getItemSelected()>_dir.getFilesVector().size()-1)
+                if(_dir.getItemSelected()==_dir.getFilesVector().size()-1)
                 {
                     picture->load(_dir.returnPath(0));
                     _dir.setSelectedItem(0);
@@ -78,6 +78,7 @@ void Image::run()
                 picture->load(_dir.returnPath(_dir.getItemSelected()));
                 _dir.hide();
             }
+            picture->setSize(1000,600);
         }
         _i.getFormat()->getWindow()->clear();
         _i.getGui()->draw();
