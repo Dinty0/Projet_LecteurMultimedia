@@ -11,7 +11,6 @@ class Image
 	public:
 		Image(ImageInterfaceFactory* iiFact);
 		void afficher();
-		void ChronoAddOne();
 		void run();
 
 };

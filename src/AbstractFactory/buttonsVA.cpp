@@ -26,7 +26,7 @@ void ButtonsVA::createButtons(tgui::Gui* gui)
 {
     tgui::Button::Ptr buttonPlay(*gui);
     buttonPlay->load(THEME_CONFIG_FILE);
-    buttonPlay->setPosition(0, 0);
+    buttonPlay->setPosition(0, 500);
     buttonPlay->setText("Play");
     buttonPlay->setCallbackId(1);
     buttonPlay->bindCallback(tgui::Button::LeftMouseClicked);
@@ -37,7 +37,7 @@ void ButtonsVA::createButtons(tgui::Gui* gui)
 
     tgui::Button::Ptr buttonPause(*gui);
     buttonPause->load(THEME_CONFIG_FILE);
-    buttonPause->setPosition(200, 0);
+    buttonPause->setPosition(200, 500);
     buttonPause->setText("Pause");
     buttonPause->setCallbackId(2);
     buttonPause->bindCallback(tgui::Button::LeftMouseClicked);
@@ -47,8 +47,8 @@ void ButtonsVA::createButtons(tgui::Gui* gui)
 
     tgui::Button::Ptr buttonStop(*gui);
     buttonStop->load(THEME_CONFIG_FILE);
-    buttonStop->setPosition(400, 0);
-    buttonStop->setText("Image");
+    buttonStop->setPosition(400, 500);
+    buttonStop->setText("Stop");
     buttonStop->setCallbackId(3);
     buttonStop->bindCallback(tgui::Button::LeftMouseClicked);
     buttonStop->setSize(100, 100);

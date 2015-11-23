@@ -24,12 +24,8 @@ void Audio::run()
 {
 
     sf::SoundBuffer buffer;
-    if (!buffer.loadFromFile("319.wav"))
-        std::cout << "fichier raté" << std::endl;
-
     sf::Sound sound;
     sound.setBuffer(buffer);
-    sound.play();
 
 	tgui::Callback callback;
 	tgui::Picture::Ptr picture(*(_i.getGui()));

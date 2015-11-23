@@ -3,7 +3,7 @@
 FormatSmall::FormatSmall()
 {
 	_longueurLecteur = 600;
-	_largeurLecteur = 200;
+	_largeurLecteur = 600;
 }
 
 void FormatSmall::createFormat()
