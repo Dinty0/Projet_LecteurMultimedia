@@ -13,7 +13,7 @@ SFMLFLAG= -lboost_filesystem -lboost_system -lGLEW -lopenal -lavcodec -lavdevice
 LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Directories
-SRCDIR=src src/AbstractFactory src/Dir src/StateVideo
+SRCDIR=src src/AbstractFactory src/Dir src/StateVideo src/StateAudio
 OBJDIR=obj
 BINDIR=bin
 

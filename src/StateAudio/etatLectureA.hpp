@@ -33,13 +33,13 @@ class EtatLectureA : public EtatA
 		 * @brief utiliserBoutonStopA : passe l'audio dans l'état stop
 		 * 
 		 */
-		void utiliserBoutonStopA();
+		void utiliserBoutonStopA(sf::Sound* sound);
 
 		/**
 		 * @brief utiliserBoutonPauseA : passe l'audio dans l'état pause
 		 * 
 		 */
-		void utiliserBoutonPauseA();
+		void utiliserBoutonPauseA(sf::Sound* sound);
 
 		/**
 		 * @brief afficherA : affiche l'état lecture

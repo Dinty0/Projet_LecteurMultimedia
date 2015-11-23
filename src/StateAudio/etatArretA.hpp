@@ -9,6 +9,7 @@
 #define ETATARRETA_H
 
 #include "etatA.hpp"
+ 
 
 class EtatArretA : public EtatA
 {
@@ -32,7 +33,7 @@ class EtatArretA : public EtatA
 		 * @brief utiliserBoutonLectureA : passe l'audio dans l'état lecture
 		 * 
 		 */
-		void utiliserBoutonLectureA();
+		void utiliserBoutonLectureA(sf::Sound* sound);
 
 		/**
 		 * @brief afficherA : afficher l'état arret

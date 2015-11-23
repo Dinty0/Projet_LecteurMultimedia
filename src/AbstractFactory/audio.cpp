@@ -2,6 +2,9 @@
 #include <iostream>
 
 #include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
+#include <TGUI/TGUI.hpp>
+#include <sfeMovie/Movie.hpp>
 
 #define THEME_CONFIG_FILE "src/widgets/Black.conf"
 
@@ -13,6 +16,57 @@ Audio::Audio(AudioInterfaceFactory* aiFact)
 	ButtonsVA* bva = new ButtonsVA();
 	FormatSmall* fs = new FormatSmall();
 	_i = aiFact->createInterface(bva,fs);
+
+    EtatArretA ea(this);
+    EtatLectureA el(this);
+    EtatPauseA ep(this);
+
+    _etatArret = ea;
+    _etatLecture = el;
+    _etatPause = ep;
+    _etatCourant = &(_etatArret);
+
+}
+
+EtatA* Audio::getEtatCourant()
+{
+    return _etatCourant;
+}
+
+EtatLectureA* Audio::getEtatLecture()
+{
+    return &_etatLecture;
+}
+
+EtatPauseA* Audio::getEtatPause()
+{
+    return &_etatPause; 
+}
+
+EtatArretA* Audio::getEtatArret()
+{
+    return &_etatArret;
+}
+
+void Audio::setEtat(EtatA* ea)
+{
+    _etatCourant = ea;
+    _etatCourant->afficherA();
+}
+
+void Audio::utiliserBoutonLecture(sf::Sound* sound)
+{
+    _etatCourant->utiliserBoutonLectureA(sound);
+}
+
+void Audio::utiliserBoutonPause(sf::Sound* sound)
+{
+    _etatCourant->utiliserBoutonPauseA(sound);
+}
+
+void Audio::utiliserBoutonStop(sf::Sound* sound)
+{
+    _etatCourant->utiliserBoutonStopA(sound);
 }
 
 void Audio::afficher()
@@ -22,7 +76,6 @@ void Audio::afficher()
 
 void Audio::run()
 {
-
     sf::SoundBuffer buffer;
     sf::Sound sound;
     sound.setBuffer(buffer);
@@ -47,22 +100,19 @@ void Audio::run()
         {
             if (callback.id == 1)
             {            
-                std::cout << "play" << std::endl;
-                sound.play();
+                utiliserBoutonLecture(&sound);
             }
           	else if (callback.id == 2)
             {
-            	std::cout << "pause" << std::endl;
+            	utiliserBoutonPause(&sound);
             }
             else if (callback.id == 3)
             {
-            	std::cout << "stop" << std::endl;
+            	utiliserBoutonStop(&sound);
             }
         }
         _i.getFormat()->getWindow()->clear();
         _i.getGui()->draw();
         _i.getFormat()->getWindow()->display();
     }
-
-
 }

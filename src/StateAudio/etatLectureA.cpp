@@ -1,5 +1,5 @@
 #include "etatLectureA.hpp"
-#include "audio.hpp"
+#include "../AbstractFactory/audio.hpp"
 
 EtatLectureA::EtatLectureA(){}
 
@@ -8,13 +8,15 @@ EtatLectureA::EtatLectureA(Audio* a)
 	_audio = a;
 }
 
-void EtatLectureA::utiliserBoutonStopA()
+void EtatLectureA::utiliserBoutonStopA(sf::Sound* sound)
 {
+	sound->stop();
 	_audio->setEtat(_audio->getEtatArret());
 }
 
-void EtatLectureA::utiliserBoutonPauseA()
+void EtatLectureA::utiliserBoutonPauseA(sf::Sound* sound)
 {
+	sound->pause();
 	_audio->setEtat(_audio->getEtatPause());
 }
 
