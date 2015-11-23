@@ -1,5 +1,5 @@
 #include "etatLectureV.hpp"
-#include "video.hpp"
+#include "../AbstractFactory/video.hpp"
 
 EtatLectureV::EtatLectureV(){}
 
@@ -8,13 +8,16 @@ EtatLectureV::EtatLectureV(Video* v)
 	_video = v;
 }
 
-void EtatLectureV::utiliserBoutonStopV()
+void EtatLectureV::utiliserBoutonStopV(sfe::Movie* movie)
 {
+	movie->stop();
 	_video->setEtat(_video->getEtatArret());
+
 }
 
-void EtatLectureV::utiliserBoutonPauseV()
+void EtatLectureV::utiliserBoutonPauseV(sfe::Movie* movie)
 {
+	movie->pause();
 	_video->setEtat(_video->getEtatPause());
 }
 

@@ -9,6 +9,7 @@
 #define ETATV_H
 
 #include <iostream>
+#include <sfeMovie/Movie.hpp>
 
 class Video;
 
@@ -20,19 +21,19 @@ class EtatV
 		 * @brief utiliserBoutonStopV : selon l'etat, effectue l'action du bouttonstop
 		 * 
 		 */
-		virtual void utiliserBoutonStopV(){}
+		virtual void utiliserBoutonStopV(sfe::Movie* movie){}
 
 		/**
 		 * @brief utiliserBoutonPauseV : selon l'etat, effectue l'action du bouttonpause
 		 * 
 		 */
-		virtual void utiliserBoutonPauseV(){}
+		virtual void utiliserBoutonPauseV(sfe::Movie* movie){}
 
 		/**
 		 * @brief utiliserBoutonLectureV : selon l'etat, effectue l'action du bouttonlecture
 		 * 
 		 */
-		virtual void utiliserBoutonLectureV(){}
+		virtual void utiliserBoutonLectureV(sfe::Movie* movie){}
 
 		/**
 		 * @brief afficherV : selon l'etat, affiche l'état de la vidéo

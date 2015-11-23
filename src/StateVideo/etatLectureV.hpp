@@ -33,13 +33,13 @@ class EtatLectureV : public EtatV
 		 * @brief utiliserBoutonStopV : passe la video dans l'état stop
 		 * 
 		 */
-		void utiliserBoutonStopV();
+		void utiliserBoutonStopV(sfe::Movie* movie);
 
 		/**
 		 * @brief utiliserBoutonPauseV : passe la video dans l'état pause
 		 * 
 		 */
-		void utiliserBoutonPauseV();
+		void utiliserBoutonPauseV(sfe::Movie* movie);
 
 		/**
 		 * @brief afficherV : affiche l'état lecture
