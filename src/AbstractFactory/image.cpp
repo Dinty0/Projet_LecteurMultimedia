@@ -73,7 +73,7 @@ void Image::run()
 
                 }
             }
-            else if(callback.id == 2)
+            else if(callback.id == 5)
             {   
                 picture->load(_dir.returnPath(_dir.getItemSelected()));
                 _dir.hide();

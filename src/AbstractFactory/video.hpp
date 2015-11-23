@@ -5,6 +5,7 @@
 #include "../StateVideo/etatArretV.hpp"
 #include "../StateVideo/etatLectureV.hpp"
 #include "../StateVideo/etatPauseV.hpp"
+#include "../Dir/Dir.hpp"
 
 class Video
 {
@@ -15,6 +16,7 @@ class Video
 		EtatArretV _etatArret;
 		EtatLectureV _etatLecture;
 		EtatPauseV _etatPause;
+		Dir _dir;
 		//...
 	public:
 		

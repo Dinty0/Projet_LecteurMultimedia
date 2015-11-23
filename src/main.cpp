@@ -11,7 +11,7 @@
 
 int main()
 {    
-    sf::RenderWindow window(sf::VideoMode(600, 600), "Lecteur multimedia");
+    sf::RenderWindow window(sf::VideoMode(600, 100), "Lecteur multimedia");
     tgui::Gui gui(window);
     tgui::Callback callback;
     sfe::Movie movie;

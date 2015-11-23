@@ -1,6 +1,7 @@
 #ifndef SUBTITLESUBJECT_HPP
 #define SUBTITLESUBJECT_HPP
 #include "Subject.hpp"
+#include "SfeMovie/Movie"
 #include <vector>
 #include <ctime>
 
@@ -10,6 +11,7 @@ class SubtitleSubject : public Subject
 	private:
 		std::vector<Observer*> _list;
 		std::string _subtitleLine;
+		sfe::Movie *_movie;
 		std::string _start;
 		std::string _end;
 		std::string _chrono;
@@ -46,8 +48,6 @@ class SubtitleSubject : public Subject
 			 */
 		void notifierObs();
 		bool isDigit(std::string s);
-		void ChronoAddOne();
-
 
 };
 

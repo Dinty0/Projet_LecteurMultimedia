@@ -36,11 +36,10 @@ void Dir::createDirWidget(tgui::Gui* gui)
 	listBox->setItemHeight(20);
 	listBox->setPosition(300, 90);
 	listBox->bindCallback(tgui::ListBox::ItemSelected);
-	listBox->setCallbackId(2);
+	listBox->setCallbackId(5);
 
     for(std::string s: _filesVector )
 	{
-
 		i=s.size()-1;
 		while(c!=s[i])
 		{

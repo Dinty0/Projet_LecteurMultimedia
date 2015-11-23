@@ -80,7 +80,8 @@ void Video::utiliserBoutonStop(sfe::Movie* movie)
 void Video::run()
 {
 	sfe::Movie movie;
-	movie.openFromFile("ressources/Video/mobile.ogg");
+    _dir.setFilesVector("ressources/Video");
+    _dir.createDirWidget(_i.getGui());
 
     _i.getGui()->get("buttonPlay")->setPosition(0,770);
     _i.getGui()->get("buttonPause")->setPosition(60,770);
@@ -88,8 +89,6 @@ void Video::run()
 
 	tgui::Callback callback;
 
-    tgui::Picture::Ptr picture(*(_i.getGui()));
-    picture->load("src/fond-blanc.png");
 
 	while (_i.getFormat()->getWindow()->isOpen())
     {
@@ -118,9 +117,17 @@ void Video::run()
             {
                 utiliserBoutonStop(&movie);
             }
+            else if(callback.id==5){
+                movie.openFromFile(_dir.returnPath(_dir.getItemSelected()));
+                _dir.hide();
+                movie.resizeToFrame(0, 0, _i.getFormat()->getWindow()->getSize().x, _i.getFormat()->getWindow()->getSize().y);
+
+
+            }
         }
         _i.getFormat()->getWindow()->clear();
         _i.getGui()->draw();
+        _i.getFormat()->getWindow()->draw(movie);
         _i.getFormat()->getWindow()->display();
     }
 }

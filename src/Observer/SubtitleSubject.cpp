@@ -8,11 +8,10 @@
 #include <chrono>
 #include <stdlib.h>
 
-SubtitleSubject::SubtitleSubject()
+SubtitleSubject::SubtitleSubject(sfe::Movie m)
 {
 	_subtitleLine="";
-	_chrono="00:00:00";
-
+	_movie=&m;
 }
 
 int SubtitleSubject::addObs(Observer* o)
@@ -46,29 +45,6 @@ void SubtitleSubject::notifyObs()
 std::string SubtitleSubject::getData()
 {
 	return _data;
-}
-
-void SubtitleSubject::ChronoAddOne()
-{
-	if(_chrono.substr(6,2).compare("59"))
-	{
-		_chrono.substr(6,2)="00";
-		if(_chrono.substr(3,2).compare("59"))
-		{
-			_chrono.substr(3,2)="00";
-			_chrono.substr(0,2) = std::to_string(1+std::stoi(_chrono.substr(0,2)));
-		}
-		else
-		{
-			_chrono.substr(3,2) = std::to_string(1+std::stoi(_chrono.substr(3,2)));
-		}
-
-	}
-	else
-	{
-		_chrono.substr(6,2) = std::to_string(1+std::stoi(_chrono.substr(6,2)));
-
-	}
 }
 
 
