@@ -1,7 +1,7 @@
 #ifndef SUBTITLESUBJECT_HPP
 #define SUBTITLESUBJECT_HPP
 #include "Subject.hpp"
-#include "SfeMovie/Movie"
+#include <sfeMovie/Movie.hpp>
 #include <vector>
 #include <ctime>
 
@@ -16,7 +16,7 @@ class SubtitleSubject : public Subject
 		std::string _end;
 		std::string _chrono;
 	public:	
-		SubtitleSubject();
+		SubtitleSubject(sfe::Movie *m);
 			/*
 			 * @brief Getteur
 			 * @return _retour la dernière donnée retirée du fichier en format txt.
@@ -47,6 +47,9 @@ class SubtitleSubject : public Subject
 			 *
 			 */
 		void notifierObs();
+
+		void floatToString(float i);
+		int stringToFloat(std::string t);
 		bool isDigit(std::string s);
 
 };

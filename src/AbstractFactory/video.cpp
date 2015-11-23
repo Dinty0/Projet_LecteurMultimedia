@@ -14,6 +14,9 @@
 #include "../StateVideo/etatArretV.hpp"
 #include "../StateVideo/etatLectureV.hpp"
 #include "../StateVideo/etatPauseV.hpp"
+#include "../Observer/SubtitleSubject.hpp"
+#include "../Observer/SubtitleLineObs.hpp"
+
 
 Video::Video(VideoInterfaceFactory* viFact)
 {
@@ -84,6 +87,9 @@ void Video::run()
 	sfe::Movie movie;
     _dir.setFilesVector("ressources/Video");
     _dir.createDirWidget(_i.getGui());
+
+    SubtitleSubject suj(*movie);
+    SubtitleLineObs obs(*suj, _i.getGui());
 
     tgui::Button::Ptr buttonST(*(_i.getGui()));
     buttonST->load(THEME_CONFIG_FILE);

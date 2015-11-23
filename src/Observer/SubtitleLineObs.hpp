@@ -15,7 +15,7 @@ class SubtitleLineObs : public Observer
 			 * @brief Constructeur
 			 * @param le sujet a observer
 			 */
-			SubtitleLineObs(Subject *s);
+			SubtitleLineObs(Subject *s, tgui::Gui* gui);
 
 			std::string getData();
 
