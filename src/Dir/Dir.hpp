@@ -21,6 +21,8 @@ class Dir
 		void createDirWidget(tgui::Gui* gui);
 		std::string returnPath(int id);
 		int getItemSelected();
+		void setSelectedItem(int i);
+		void hide();
 
 };
 

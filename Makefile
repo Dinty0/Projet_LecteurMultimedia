@@ -1,5 +1,5 @@
 # Project name
-EXEC=ghost
+EXEC=LecteurMultimedia
 
 # Compiler
 IDIR=include 

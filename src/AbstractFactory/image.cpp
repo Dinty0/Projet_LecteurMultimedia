@@ -9,15 +9,15 @@
 Image::Image(ImageInterfaceFactory* iiFact)
 {
     FormatBig* fb = new FormatBig();
-	ButtonsI* bi = new ButtonsI();
-	_i = iiFact->createInterface(bi,fb);
-    _chrono="00:00:00";
+    ButtonsI* bi = new ButtonsI();
+    _i = iiFact->createInterface(bi,fb);
 
 }
 
+
 void Image::afficher()
 {
-	std::cout << "Je suis un image" << std::endl;
+    std::cout << "Je suis un image" << std::endl;
 }
 
 void Image::run()
@@ -26,12 +26,12 @@ void Image::run()
 
     tgui::Picture::Ptr picture(*(_i.getGui()));
     picture->load("src/fond-blanc.png");
-
     _dir.setFilesVector("ressources/Image");
     _dir.createDirWidget(_i.getGui());
 
-	while (_i.getFormat()->getWindow()->isOpen())
+    while (_i.getFormat()->getWindow()->isOpen())
     {
+
         sf::Event event;
         while (_i.getFormat()->getWindow()->pollEvent(event))
         {
@@ -50,27 +50,33 @@ void Image::run()
                if(_dir.getItemSelected()==0)
                 {
                     picture->load(_dir.returnPath(_dir.getFilesVector().size()-1));
+                    _dir.setSelectedItem(_dir.getFilesVector().size()-1);
                 }
                 else
                 {
                     picture->load(_dir.returnPath(_dir.getItemSelected()-1));
+                    _dir.setSelectedItem(_dir.getItemSelected()-1);
                 }
             }
-          	else if (callback.id == 1)
+            else if (callback.id == 1)
             {
                 // suivant
                 if(_dir.getItemSelected()>_dir.getFilesVector().size()-1)
                 {
                     picture->load(_dir.returnPath(0));
+                    _dir.setSelectedItem(0);
                 }
                 else
                 {
                     picture->load(_dir.returnPath(_dir.getItemSelected()+1));
+                    _dir.setSelectedItem(_dir.getItemSelected()+1);
+
                 }
             }
             else if(callback.id == 2)
             {   
                 picture->load(_dir.returnPath(_dir.getItemSelected()));
+                _dir.hide();
             }
         }
         _i.getFormat()->getWindow()->clear();

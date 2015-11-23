@@ -54,6 +54,14 @@ void Dir::createDirWidget(tgui::Gui* gui)
 
 }
 
+void Dir::hide(){
+	_listBox->hide();
+}
+
+void Dir::setSelectedItem(int i){
+	_listBox->setSelectedItem(i);
+}
+
 std::string Dir::returnPath(int id){
 	return _filesVector.at(id);
 }
