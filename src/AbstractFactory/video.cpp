@@ -24,6 +24,10 @@ void Video::run()
 	movie.openFromFile("ressources/Video/elephants-dream.webm");
     movie.play();
 
+    _i.getGui()->get("buttonPlay")->setPosition(0,770);
+    _i.getGui()->get("buttonPause")->setPosition(60,770);
+    _i.getGui()->get("buttonStop")->setPosition(120,770);
+
 	tgui::Callback callback;
 
     tgui::Picture::Ptr picture(*(_i.getGui()));
