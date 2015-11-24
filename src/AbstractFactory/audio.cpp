@@ -77,6 +77,7 @@ void Audio::afficher()
 void Audio::run()
 {
     sf::SoundBuffer buffer;
+    buffer.loadFromFile("ressources/Musique/319.wav");
     sf::Sound sound;
     sound.setBuffer(buffer);
 
