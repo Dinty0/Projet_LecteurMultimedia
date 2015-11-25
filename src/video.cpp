@@ -2,7 +2,7 @@
 #include <sfeMovie/Movie.hpp>
 #include <SFML/Graphics.hpp>
 #include <TGUI/TGUI.hpp>
-
+#include <boost/thread/thread.hpp>
 #include "video.hpp"
 
 #include "AbstractFactory/buttonsVA.hpp"
@@ -86,13 +86,13 @@ void Video::run()
 {
 	sfe::Movie movie;
     tgui::Callback callback;
-    bool load=false;
+    bool subtitle=false;
 
 
 
     SubtitleSubject suj(&movie);
     SubtitleLineObs obs(&suj, _i.getGui());
-    //suj.addObs(&obs);
+    suj.addObs(&obs);
 
         _dir.setFilesVector("ressources/Video");
     _dir.createDirWidget(_i.getGui());
@@ -126,8 +126,23 @@ void Video::run()
         while (_i.getGui()->pollCallback(callback))
         {
             if (callback.id == 1)
-            {            
-                utiliserBoutonLecture(&movie);
+            {   
+                if(subtitle)
+                {
+                    std::string path = "ressources/SousTitres/"+_dir.getItem(_dir.getItemSelected()).substr(0, _dir.getItem(_dir.getItemSelected()).size()-3)+"txt";
+
+                    //boost::thread lecture(&Video::utiliserBoutonLecture, this, &movie);
+                    boost::thread subt(&SubtitleSubject::setData, &suj, path);
+                    //lecture.join();
+                    utiliserBoutonLecture(&movie);
+                    subt.join();
+
+                    //.setData(path);
+                }
+                else
+                {
+                    utiliserBoutonLecture(&movie);
+                }
                 _i.getGui()->draw();
             }
           	else if (callback.id == 2)
@@ -140,20 +155,13 @@ void Video::run()
             }
             else if (callback.id == 4)
             {
-                if(load)
-                {
-                    std::string path = _dir.getItem(_dir.getItemSelected()).substr(0, _dir.getItem(_dir.getItemSelected()).size()-3)+"txt";
-                    std::cout << path << std::endl;
-                    suj.setData("ressources/SousTitres"+path);
-
-                }
+                subtitle=true;
 
             }
             else if(callback.id==5){
                 movie.openFromFile(_dir.returnPath(_dir.getItemSelected()));
                 _dir.hide();
                 movie.resizeToFrame(0, 0, _i.getFormat()->getWindow()->getSize().x, _i.getFormat()->getWindow()->getSize().y);
-                load=true;
 
 
             }

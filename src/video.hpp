@@ -75,4 +75,5 @@ class Video
 		 */
 		void utiliserBoutonPause(sfe::Movie* movie);
 
+
 };

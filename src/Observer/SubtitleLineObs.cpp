@@ -23,7 +23,7 @@ std::string SubtitleLineObs::getData(){
 }
 
 void SubtitleLineObs::display()
-{
+{	std::cout<<_data<<std::endl;
 	_label->setText(_data);
 
 }

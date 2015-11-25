@@ -99,55 +99,56 @@ float SubtitleSubject::stringToFloat(std::string t)
 
 void SubtitleSubject::setData(std::string name)
 {	
-	std::cout << "0" << std::endl;
+	std::cout << name << std::endl;
 	std::ifstream file(name);
-	float sec;
-	float end=stringToFloat("00:00:00");
-	float start;//=stringToFloat(_start);
-	bool notify=false;
-
-	std::cout << "0.5" << std::endl;
-
-	while(!file.eof())
+	if(file)
 	{
-		sec=_movie->getPlayingOffset().asSeconds();
-		std::cout<<sec<<std::endl;
-		/*
-		if(end-sec<0)
+		float sec;
+		float end=stringToFloat("00:00:00");
+		float start;//=stringToFloat(_start);
+		bool notify=false;
+
+		std::cout << "0.5" << std::endl;
+
+		while(!file.eof())
 		{
+			sec=_movie->getPlayingOffset().asSeconds();	
 			getline(file, _subtitleLine);
-			_subtitleLine.pop_back();
-			std::cout << "1" << std::endl;
-			while(_subtitleLine.substr(13,3) != "-->")
+
+			if(_subtitleLine.size()>2)
 			{
-				getline(file, _subtitleLine);
+				if(_subtitleLine.substr(13,3) == "-->")
+				{
+					_subtitleLine.pop_back();
+					_start = _subtitleLine.substr(0, 11);
+					_end = _subtitleLine.substr(17, 11);
+					std::cout<<_subtitleLine<<std::endl;
+
+					end=stringToFloat(_end);
+					start=stringToFloat(_start);
+					getline(file, _subtitleLine);
+					_subtitleLine.pop_back();
+					while(start-sec>0)
+						{
+							std::cout<<sec<<std::endl;
+							sec=_movie->getPlayingOffset().asSeconds();
+							std::this_thread::sleep_for (std::chrono::seconds(1));
+						}
+					notifyObs();
+
+					while(end-sec>0)
+						{
+														std::cout<<sec<<std::endl;
+
+							sec=_movie->getPlayingOffset().asSeconds();
+							std::this_thread::sleep_for (std::chrono::seconds(1));
+						}
+						_subtitleLine="";
+						notifyObs();
+				}
 			}
-			std::cout << "2" << std::endl;
-			_subtitleLine.pop_back();
-			_start = _subtitleLine.substr(0, 11);
-			_end = _subtitleLine.substr(17, 11);
-			end=stringToFloat(_end);
-			start=stringToFloat(_start);
-			getline(file, _subtitleLine);
-			_subtitleLine.pop_back();
-			notify=false;
 		}
-		/*
-		if (start-sec<0 && !notify)
-		{
-			notifyObs();
-			notify=true;
-		} /*else if(end-sec<0)
-		{
-			_subtitleLine="";
-			notifyObs();
-		}*/
-
-   		std::this_thread::sleep_for (std::chrono::seconds(1));
-
 	}	
-	
-
 }
 
 
