@@ -5,9 +5,9 @@
 #include <SFML/Audio.hpp>
 #define THEME_CONFIG_FILE "src/widgets/Black.conf"
 
-#include "AbstractFactory/video.hpp"
-#include "AbstractFactory/audio.hpp"
-#include "AbstractFactory/image.hpp"
+#include "video.hpp"
+#include "audio.hpp"
+#include "image.hpp"
 
 int main()
 {    
