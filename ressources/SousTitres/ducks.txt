@@ -4,8 +4,8 @@ canard
 
 2
 00:00:04,247 --> 00:00:05,248
-canard
+canard canard
 
 3
 00:00:07,247 --> 00:00:09,248
-canard
+canard canard canard

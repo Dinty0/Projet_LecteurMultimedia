@@ -134,7 +134,8 @@ void Video::run()
                     //boost::thread lecture(&Video::utiliserBoutonLecture, this, &movie);
                     boost::thread subt(&SubtitleSubject::setData, &suj, path);
                     //lecture.join();
-                    utiliserBoutonLecture(&movie);
+                    //utiliserBoutonLecture(&movie);
+                    movie.play();
                     subt.join();
 
                     //.setData(path);
