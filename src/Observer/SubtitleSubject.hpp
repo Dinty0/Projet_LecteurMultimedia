@@ -46,10 +46,26 @@ class SubtitleSubject : public Subject
 			 * @brief Notifie l'ensemble des observers ajoutés à au vecteur
 			 *
 			 */
-		void notifierObs();
+		void notifyObs();
 
+			/*
+			 * @brief Transforme un float en String
+			 * @param le float a modifier
+			 */
 		void floatToString(float i);
-		int stringToFloat(std::string t);
+		/*
+			 * @brief Modifie un string en float 
+			 * @param la chaine de caractere a modifier
+			 * @return _retour retourne le float
+			 *
+			 */
+		float stringToFloat(std::string t);
+		/*
+			 * @brief Test si une chaine de caractère ne contient que des chiffres
+			 * @param la chaine de caracteres a tester
+			 * @return _retour retourne 1 si vraie sinon 0
+			 *
+			 */
 		bool isDigit(std::string s);
 
 };

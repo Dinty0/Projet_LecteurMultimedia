@@ -1,4 +1,4 @@
-#include "SubtitleFile.hpp"
+#include "SubtitleSubject.hpp"
 #include <iostream>
 #include <fstream>
 #include <iterator>
@@ -18,7 +18,7 @@ SubtitleSubject::SubtitleSubject(sfe::Movie *m)
 
 int SubtitleSubject::addObs(Observer* o)
 {
-	_liste.push_back(o);
+	_list.push_back(o);
 	return 1;
 }
 
@@ -39,14 +39,14 @@ void SubtitleSubject::notifyObs()
 {
 	for(Observer *o : _list )
 	{
-		o->update(_data);
+		o->update(_subtitleLine);
 
 	}
 }
 
 std::string SubtitleSubject::getData()
 {
-	return _data;
+	return _subtitleLine;
 }
 
 void SubtitleSubject::floatToString(float sec)
@@ -55,11 +55,11 @@ void SubtitleSubject::floatToString(float sec)
 	std::string minutes;
 	std::string secondes;
 
-	heures=to_string(sec/3600);
-	sec=sec%3600;
-	minutes=to_string(sec/60);
+	heures=std::to_string(sec/3600);
+	sec=(int)sec%3600;
+	minutes=std::to_string(sec/60);
 	sec=sec/60;
-	secondes=to_string(sec);
+	secondes=std::to_string(sec);
 
 	if(heures.size()<2)
 	{
@@ -93,47 +93,53 @@ bool SubtitleSubject::isDigit(std::string s)
 
 float SubtitleSubject::stringToFloat(std::string t)
 {
-	float timer= atoi(t.substr(0,2))*3600+atoi(t.substr(3,2))*60+atoi(t.substr(6,2));
+	float timer= atoi(t.substr(0,2).c_str())*3600+atoi(t.substr(3,2).c_str())*60+atoi(t.substr(6,2).c_str());
 	return timer;
 }
 
 void SubtitleSubject::setData(std::string name)
 {	
-	
+	std::cout << "0" << std::endl;
 	std::ifstream file(name);
 	float sec;
-	float end=stringToFloat(_end);
-	float start=stringToFloat(_start);
+	float end=stringToFloat("00:00:00");
+	float start;//=stringToFloat(_start);
 	bool notify=false;
+
+	std::cout << "0.5" << std::endl;
 
 	while(!file.eof())
 	{
-		sec=_movie->PlayingOffset().asSeconds();
-		floatToString(sec);
+		sec=_movie->getPlayingOffset().asSeconds();
+		std::cout<<sec<<std::endl;
+		/*
 		if(end-sec<0)
 		{
-			getline(file, _data);
-			_data.pop_back();
-			while(_data.substr(13,3) != "-->")
+			getline(file, _subtitleLine);
+			_subtitleLine.pop_back();
+			std::cout << "1" << std::endl;
+			while(_subtitleLine.substr(13,3) != "-->")
 			{
-				getline(file, _data);
+				getline(file, _subtitleLine);
 			}
-			_data.pop_back();
-			_start = _data.substr(0, 11);
-			_end = _data.substr(17, 11);
+			std::cout << "2" << std::endl;
+			_subtitleLine.pop_back();
+			_start = _subtitleLine.substr(0, 11);
+			_end = _subtitleLine.substr(17, 11);
 			end=stringToFloat(_end);
-			start=stringToFloat(_end);
-			getline(file, _data);
-			_data.pop_back();
+			start=stringToFloat(_start);
+			getline(file, _subtitleLine);
+			_subtitleLine.pop_back();
 			notify=false;
 		}
+		/*
 		if (start-sec<0 && !notify)
 		{
 			notifyObs();
 			notify=true;
 		} /*else if(end-sec<0)
 		{
-			_data="";
+			_subtitleLine="";
 			notifyObs();
 		}*/
 

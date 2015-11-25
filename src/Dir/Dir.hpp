@@ -23,6 +23,7 @@ class Dir
 		int getItemSelected();
 		void setSelectedItem(int i);
 		void hide();
+		std::string getItem(int i);
 
 };
 

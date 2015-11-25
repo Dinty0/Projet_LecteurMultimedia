@@ -2,6 +2,7 @@
 #define SUBTITLELINEOBS_HPP
 
 #include "Observer.hpp"
+#include <TGUI/TGUI.hpp>
 
 
 class SubtitleLineObs : public Observer
@@ -9,6 +10,7 @@ class SubtitleLineObs : public Observer
 	private:
 			std::string _data;
 			Subject *_subject;
+			tgui::Label::Ptr _label;
 
 	public:
 			/*
@@ -17,8 +19,17 @@ class SubtitleLineObs : public Observer
 			 */
 			SubtitleLineObs(Subject *s, tgui::Gui* gui);
 
+			/*
+			 * @brief accesseur data
+			 * @return retourne une chaine de caractère
+			 */
+
 			std::string getData();
 
+			/*
+			 * @brief fonction d'affichage du widget
+			 *
+			 */
 			void display();
 			
 			/*

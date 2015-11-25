@@ -85,11 +85,17 @@ void Video::utiliserBoutonStop(sfe::Movie* movie)
 void Video::run()
 {
 	sfe::Movie movie;
-    _dir.setFilesVector("ressources/Video");
-    _dir.createDirWidget(_i.getGui());
+    tgui::Callback callback;
+    bool load=false;
 
-    SubtitleSubject suj(*movie);
-    SubtitleLineObs obs(*suj, _i.getGui());
+
+
+    SubtitleSubject suj(&movie);
+    SubtitleLineObs obs(&suj, _i.getGui());
+    //suj.addObs(&obs);
+
+        _dir.setFilesVector("ressources/Video");
+    _dir.createDirWidget(_i.getGui());
 
     tgui::Button::Ptr buttonST(*(_i.getGui()));
     buttonST->load(THEME_CONFIG_FILE);
@@ -103,7 +109,6 @@ void Video::run()
     _i.getGui()->get("buttonPause")->setPosition(60,770);
     _i.getGui()->get("buttonStop")->setPosition(120,770);
 
-	tgui::Callback callback;
 
 
 	while (_i.getFormat()->getWindow()->isOpen())
@@ -135,12 +140,20 @@ void Video::run()
             }
             else if (callback.id == 4)
             {
+                if(load)
+                {
+                    std::string path = _dir.getItem(_dir.getItemSelected()).substr(0, _dir.getItem(_dir.getItemSelected()).size()-3)+"txt";
+                    std::cout << path << std::endl;
+                    suj.setData("ressources/SousTitres"+path);
+
+                }
 
             }
             else if(callback.id==5){
                 movie.openFromFile(_dir.returnPath(_dir.getItemSelected()));
                 _dir.hide();
                 movie.resizeToFrame(0, 0, _i.getFormat()->getWindow()->getSize().x, _i.getFormat()->getWindow()->getSize().y);
+                load=true;
 
 
             }

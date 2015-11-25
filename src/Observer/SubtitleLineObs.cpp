@@ -1,28 +1,30 @@
 #include "SubtitleLineObs.hpp"
+#define THEME_CONFIG_FILE "src/widgets/Black.conf"
 
 
-SubtitleLineObs::SubtitleLineObs(Subject *s, tgui::Gui* gui)
+
+SubtitleLineObs::SubtitleLineObs(Subject* s, tgui::Gui* gui)
 {
 	_subject=s;
 	_data="";
 
 	tgui::Label::Ptr label(*gui);
-	listBox->load(THEME_CONFIG_FILE);
-	listBox->setSize(250, 250);
-	listBox->setItemHeight(20);
-	listBox->setPosition(300, 90);
+	label->load(THEME_CONFIG_FILE);
+	label->setSize(250, 250);
+	label->setPosition(150, 770);
+	label->setCallbackId(6);
 	_label=label;
 	gui->add(_label,"Label");
 
 }
 
-sdt::string SubtitleLineObs::getData(){
+std::string SubtitleLineObs::getData(){
 	return _data;
 }
 
 void SubtitleLineObs::display()
 {
-	_label->setText(_Data);
+	_label->setText(_data);
 
 }
 void SubtitleLineObs::update(std::string d)
