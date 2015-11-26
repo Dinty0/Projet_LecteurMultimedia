@@ -17,6 +17,8 @@
 #include "Observer/SubtitleSubject.hpp"
 #include "Observer/SubtitleLineObs.hpp"
 
+#include <X11/Xlib.h>
+
 
 Video::Video(VideoInterfaceFactory* viFact)
 {
@@ -94,7 +96,7 @@ void Video::run()
     SubtitleLineObs obs(&suj, _i.getGui());
     suj.addObs(&obs);
 
-        _dir.setFilesVector("ressources/Video");
+    _dir.setFilesVector("ressources/Video");
     _dir.createDirWidget(_i.getGui());
 
     tgui::Button::Ptr buttonST(*(_i.getGui()));
@@ -129,15 +131,15 @@ void Video::run()
             {   
                 if(subtitle)
                 {
+                    XInitThreads();
                     std::string path = "ressources/SousTitres/"+_dir.getItem(_dir.getItemSelected()).substr(0, _dir.getItem(_dir.getItemSelected()).size()-3)+"txt";
 
-                    //boost::thread lecture(&Video::utiliserBoutonLecture, this, &movie);
-                    boost::thread subt(&SubtitleSubject::setData, &suj, path);
-                    //lecture.join();
-                    //utiliserBoutonLecture(&movie);
-                    movie.play();
-                    subt.join();
+                    boost::thread* lecture = new boost::thread(boost::bind(&Video::utiliserBoutonLecture, this, &movie));
+                    boost::thread* subt = new boost::thread(boost::bind(&SubtitleSubject::setData, &suj, path));
 
+                    //utiliserBoutonLecture(&movie);
+                    //movie.play();
+                    
                     //.setData(path);
                 }
                 else
@@ -156,7 +158,14 @@ void Video::run()
             }
             else if (callback.id == 4)
             {
-                subtitle=true;
+                if (subtitle)
+                {
+                    subtitle=false;
+                }
+                else
+                {
+                    subtitle=true;
+                }
 
             }
             else if(callback.id==5){

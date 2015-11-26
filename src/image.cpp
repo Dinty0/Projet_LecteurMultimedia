@@ -14,7 +14,6 @@ Image::Image(ImageInterfaceFactory* iiFact)
 
 }
 
-
 void Image::afficher()
 {
     std::cout << "Je suis un image" << std::endl;

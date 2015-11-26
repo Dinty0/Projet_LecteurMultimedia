@@ -99,7 +99,7 @@ float SubtitleSubject::stringToFloat(std::string t)
 
 void SubtitleSubject::setData(std::string name)
 {	
-	std::cout << name << std::endl;
+	//std::cout << name << std::endl;
 	std::ifstream file(name);
 	if(file)
 	{
@@ -108,7 +108,7 @@ void SubtitleSubject::setData(std::string name)
 		float start;//=stringToFloat(_start);
 		bool notify=false;
 
-		std::cout << "0.5" << std::endl;
+		//std::cout << "0.5" << std::endl;
 
 		while(!file.eof())
 		{
@@ -122,7 +122,7 @@ void SubtitleSubject::setData(std::string name)
 					_subtitleLine.pop_back();
 					_start = _subtitleLine.substr(0, 11);
 					_end = _subtitleLine.substr(17, 11);
-					std::cout<<_subtitleLine<<std::endl;
+					//std::cout<<_subtitleLine<<std::endl;
 
 					end=stringToFloat(_end);
 					start=stringToFloat(_start);
@@ -130,7 +130,7 @@ void SubtitleSubject::setData(std::string name)
 					_subtitleLine.pop_back();
 					while(start-sec>0)
 						{
-							std::cout<<sec<<std::endl;
+							//std::cout<<sec<<std::endl;
 							sec=_movie->getPlayingOffset().asSeconds();
 							std::this_thread::sleep_for (std::chrono::seconds(1));
 						}
@@ -138,7 +138,7 @@ void SubtitleSubject::setData(std::string name)
 
 					while(end-sec>0)
 						{
-														std::cout<<sec<<std::endl;
+							//std::cout<<sec<<std::endl;
 
 							sec=_movie->getPlayingOffset().asSeconds();
 							std::this_thread::sleep_for (std::chrono::seconds(1));
