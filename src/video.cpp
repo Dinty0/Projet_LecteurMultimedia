@@ -17,9 +17,6 @@
 #include "Observer/SubtitleSubject.hpp"
 #include "Observer/SubtitleLineObs.hpp"
 
-#include <X11/Xlib.h>
-
-
 Video::Video(VideoInterfaceFactory* viFact)
 {
 	ButtonsVA* bva = new ButtonsVA();
@@ -90,8 +87,6 @@ void Video::run()
     tgui::Callback callback;
     bool subtitle=false;
 
-
-
     SubtitleSubject suj(&movie);
     SubtitleLineObs obs(&suj, _i.getGui());
     suj.addObs(&obs);
@@ -131,16 +126,12 @@ void Video::run()
             {   
                 if(subtitle)
                 {
-                    XInitThreads();
+                    
                     std::string path = "ressources/SousTitres/"+_dir.getItem(_dir.getItemSelected()).substr(0, _dir.getItem(_dir.getItemSelected()).size()-3)+"txt";
 
                     boost::thread* lecture = new boost::thread(boost::bind(&Video::utiliserBoutonLecture, this, &movie));
                     boost::thread* subt = new boost::thread(boost::bind(&SubtitleSubject::setData, &suj, path));
 
-                    //utiliserBoutonLecture(&movie);
-                    //movie.play();
-                    
-                    //.setData(path);
                 }
                 else
                 {

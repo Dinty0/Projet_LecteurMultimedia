@@ -77,13 +77,15 @@ void Audio::afficher()
 void Audio::run()
 {
     sf::SoundBuffer buffer;
-    buffer.loadFromFile("ressources/Musique/319.wav");
     sf::Sound sound;
-    sound.setBuffer(buffer);
 
-	tgui::Callback callback;
-	tgui::Picture::Ptr picture(*(_i.getGui()));
+    tgui::Callback callback;
+    tgui::Picture::Ptr picture(*(_i.getGui()));
     picture->load("src/fond-blanc.png");
+
+    _dir.setFilesVector("ressources/Musique");
+    _dir.createDirWidget(_i.getGui());
+
 
 	while (_i.getFormat()->getWindow()->isOpen())
     {
@@ -110,6 +112,11 @@ void Audio::run()
             else if (callback.id == 3)
             {
             	utiliserBoutonStop(&sound);
+
+            }
+            else if(callback.id==5){
+                buffer.loadFromFile(_dir.returnPath(_dir.getItemSelected()));
+                sound.setBuffer(buffer);
             }
         }
         _i.getFormat()->getWindow()->clear();

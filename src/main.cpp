@@ -9,8 +9,11 @@
 #include "audio.hpp"
 #include "image.hpp"
 
+#include <X11/Xlib.h>
+
 int main()
 {    
+    XInitThreads();
     sf::RenderWindow window(sf::VideoMode(600, 100), "Lecteur multimedia");
     tgui::Gui gui(window);
     tgui::Callback callback;
