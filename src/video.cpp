@@ -114,6 +114,7 @@ void Video::run()
         while (_i.getFormat()->getWindow()->pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
+                
             {
                 _i.getFormat()->getWindow()->close();
             }

@@ -59,19 +59,19 @@ class Video
 
 		/**
 		 * @brief utiliserBoutonLecture : selon l'état passe la video dans l'état lecture
-		 * 
+		 * @param prend un object de type Movie.
 		 */
 		void utiliserBoutonLecture(sfe::Movie* movie);
 
 		/**
 		 * @brief utiliserBoutonStop : selon l'etat, effectue l'action du bouttonstop
-		 * 
+		 * @param prend un object de type Movie.
 		 */
 		void utiliserBoutonStop(sfe::Movie* movie);
 
 		/**
 		 * @brief utiliserBoutonPause : selon l'etat, effectue l'action du bouttonpause
-		 * 
+		 * @param prend un object de type Movie.
 		 */
 		void utiliserBoutonPause(sfe::Movie* movie);
 

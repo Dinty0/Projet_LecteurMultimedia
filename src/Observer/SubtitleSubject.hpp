@@ -1,3 +1,10 @@
+/**
+ * @file SubtitleSubject.hpp
+ * @author K.Gomes / K.Espasa
+ * 
+ * @brief Classe SubtitleSubject , contenant les méthodes du sujet à observer
+ */
+
 #ifndef SUBTITLESUBJECT_HPP
 #define SUBTITLESUBJECT_HPP
 #include "Subject.hpp"
@@ -18,12 +25,12 @@ class SubtitleSubject : public Subject
 	public:	
 		SubtitleSubject(sfe::Movie *m);
 			/*
-			 * @brief Getteur
+			 * @brief Accesseur
 			 * @return _retour la dernière donnée retirée du fichier en format txt.
 			 */	
 		std::string getData();
 			/*
-			 * @brief Setteur mettant à jour modifiant la data
+			 * @brief Accesseur mettant à jour modifiant la data
 			 * @param la nouvelle data
 			 *
 			 */

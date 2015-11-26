@@ -21,8 +21,20 @@ class Format
 		 *
 		 */
 		virtual void createFormat()=0;
+		/**
+		 * @brief Getteur virtuel
+		 * @return Retourne la longueur de la fenetre
+		 */
 		virtual int getLongueur()=0;
+		/**
+		 * @brief Getteur virtuel
+		 * @return Retourne la largeur de la fenetre
+		 */
 		virtual int getLargeur()=0;
+		/**
+		 * @brief Getteur virtuel
+		 * @return Retourne la fenetre de type RenderWindow
+		 */
 		virtual sf::RenderWindow* getWindow()=0;
 };
 

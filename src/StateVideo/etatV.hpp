@@ -18,25 +18,25 @@ class EtatV
 	public:
 
 		/**
-		 * @brief utiliserBoutonStopV : selon l'etat, effectue l'action du bouttonstop
+		 * @brief utiliserBoutonStopV : selon l'etat, effectue l'action du bouttonstop. Virtuel
 		 * 
 		 */
 		virtual void utiliserBoutonStopV(sfe::Movie* movie){}
 
 		/**
-		 * @brief utiliserBoutonPauseV : selon l'etat, effectue l'action du bouttonpause
+		 * @brief utiliserBoutonPauseV : selon l'etat, effectue l'action du bouttonpause. Virtuel
 		 * 
 		 */
 		virtual void utiliserBoutonPauseV(sfe::Movie* movie){}
 
 		/**
-		 * @brief utiliserBoutonLectureV : selon l'etat, effectue l'action du bouttonlecture
+		 * @brief utiliserBoutonLectureV : selon l'etat, effectue l'action du bouttonlecture. Virtuel
 		 * 
 		 */
 		virtual void utiliserBoutonLectureV(sfe::Movie* movie){}
 
 		/**
-		 * @brief afficherV : selon l'etat, affiche l'état de la vidéo
+		 * @brief afficherV : selon l'etat, affiche l'état de la vidéo. Virtuel
 		 * 
 		 */
 		virtual void afficherV()=0;

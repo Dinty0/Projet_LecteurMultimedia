@@ -21,38 +21,49 @@ class ButtonsVA : public Buttons
 		tgui::Button::Ptr _bst;
 	public:
 		/*
-		 * @brief Constructeur
+		 * @brief Constructeur par défaut
 		 *
 		 */
 		ButtonsVA();
 		/*
 		 * @brief Constructeur
-		 *
+		 * @param un bouton play, un bouton stop et un bouton pause. De type pointeur de boutons
 		 */
 		ButtonsVA(tgui::Button::Ptr bpl, tgui::Button::Ptr bpa, tgui::Button::Ptr bst);
 
 		/*
 		 * @brief Accesseur
-		 * @return _bpl, le BouttonPl
+		 * @return _bpl, le BouttonPl (play)
 		 *
 		 */
 		tgui::Button::Ptr getButtonPl();
 
 		/*
 		 * @brief Accesseur
-		 * @return _bpa, le BouttonPa
+		 * @return _bpa, le BouttonPa (stop)
 		 *
 		 */
 		tgui::Button::Ptr getButtonPa();
 
 		/*
 		 * @brief Accesseur
-		 * @return _bst, le BouttonSt
+		 * @return _bst, le BouttonSt (pause)
 		 *
 		 */
 		tgui::Button::Ptr getButtonSt();
 
+		/*
+		 * @brief Accesseur
+		 * @return _bpi, le BouttonPI (previous image). Boutton pas construit dans cette classe.
+		 *
+		 */
 		tgui::Button::Ptr getButtonPI();
+
+		/*
+		 * @brief Accesseur
+		 * @return _bni, le BouttonNI (next image). Boutton pas construit dans cette classe.
+		 *
+		 */
 		tgui::Button::Ptr getButtonNI();
 		
 		/*

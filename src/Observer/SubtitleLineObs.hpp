@@ -1,3 +1,10 @@
+/**
+ * @file SubtitleLineObs.hpp
+ * @author K.Gomes / K.Espasa
+ * 
+ * @brief Classe SubtitleLineObs , contenant les méthodes pour l'observeur.
+ */
+
 #ifndef SUBTITLELINEOBS_HPP
 #define SUBTITLELINEOBS_HPP
 
@@ -15,7 +22,7 @@ class SubtitleLineObs : public Observer
 	public:
 			/*
 			 * @brief Constructeur
-			 * @param le sujet a observer
+			 * @param le sujet a observer et une interface gui
 			 */
 			SubtitleLineObs(Subject *s, tgui::Gui* gui);
 

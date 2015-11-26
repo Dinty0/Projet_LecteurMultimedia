@@ -32,8 +32,20 @@ class Interface
 		 */
 		Interface(Buttons* b, Format* f, tgui::Gui* gui);
 
+		/**
+		 * @brief Getteur
+		 * @return Retourne les boutons créés
+		 */
 		Buttons* getButtons();
+		/**
+		 * @brief Getteur
+		 * @return Retourne le format créé
+		 */
 		Format* getFormat();
+		/**
+		 * @brief Getteur
+		 * @return Retourne le gui de l'interface
+		 */
 		tgui::Gui* getGui();
 
 };
