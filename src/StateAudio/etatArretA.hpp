@@ -22,6 +22,7 @@ class EtatArretA : public EtatA
 		 * 
 		 */
 		EtatArretA();
+		
 		/**
 		 * @brief Constructeur
 		 * 

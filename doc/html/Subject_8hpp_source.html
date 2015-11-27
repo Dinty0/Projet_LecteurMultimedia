@@ -96,38 +96,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classSubject.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSubject.html">Subject</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="comment">/*</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">             * @brief Ajout un Observer. Virtuel</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">             * @param l&#39;observer à ajouter</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">             * @return _retour 1 si l&#39;observer a été ajouté</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">             *</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">             */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">int</span> addObs(<a class="code" href="classObserver.html">Observer</a>* o)=0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classSubject.html#aecac0cb2c69c2d18db0e9433f580bde7">addObs</a>(<a class="code" href="classObserver.html">Observer</a>* o)=0;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="comment">/*</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">             * @brief Supprime un Observer. Virtuel</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">             * @param l&#39;observer à supprimer</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">             * @return _retour 1 si l&#39;observer a été trouvé et supprimé sinon -1</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">             *</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">             */</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">int</span> removeObs(<a class="code" href="classObserver.html">Observer</a>* o)=0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classSubject.html#a4455d35d683c0005035121c7442b3a55">removeObs</a>(<a class="code" href="classObserver.html">Observer</a>* o)=0;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">/*</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">             * @brief Notifie l&#39;ensemble des observers ajoutés à au vecteur. Virtuel</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">             *</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">             */</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> notifyObs()=0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classSubject.html#a421d620f3f93365bfd57cd1e9165e501">notifyObs</a>()=0;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="Observer_8hpp_html"><div class="ttname"><a href="Observer_8hpp.html">Observer.hpp</a></div><div class="ttdoc">Classe Observer (abstract) </div></div>
+<div class="ttc" id="classSubject_html_a4455d35d683c0005035121c7442b3a55"><div class="ttname"><a href="classSubject.html#a4455d35d683c0005035121c7442b3a55">Subject::removeObs</a></div><div class="ttdeci">virtual int removeObs(Observer *o)=0</div><div class="ttdoc">Supprime un Observer. Virtuel. </div></div>
 <div class="ttc" id="classObserver_html"><div class="ttname"><a href="classObserver.html">Observer</a></div><div class="ttdef"><b>Definition:</b> <a href="Observer_8hpp_source.html#l00015">Observer.hpp:15</a></div></div>
+<div class="ttc" id="classSubject_html_aecac0cb2c69c2d18db0e9433f580bde7"><div class="ttname"><a href="classSubject.html#aecac0cb2c69c2d18db0e9433f580bde7">Subject::addObs</a></div><div class="ttdeci">virtual int addObs(Observer *o)=0</div><div class="ttdoc">Ajout un Observer. Virtuel. </div></div>
 <div class="ttc" id="classSubject_html"><div class="ttname"><a href="classSubject.html">Subject</a></div><div class="ttdef"><b>Definition:</b> <a href="Subject_8hpp_source.html#l00014">Subject.hpp:14</a></div></div>
+<div class="ttc" id="classSubject_html_a421d620f3f93365bfd57cd1e9165e501"><div class="ttname"><a href="classSubject.html#a421d620f3f93365bfd57cd1e9165e501">Subject::notifyObs</a></div><div class="ttdeci">virtual void notifyObs()=0</div><div class="ttdoc">Notifie l&#39;ensemble des observers ajoutés à au vecteur. Virtuel. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 26 Novembre 2015 15:21:57 pour Projet Lecteur Multimedia par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi 27 Novembre 2015 16:25:54 pour Projet Lecteur Multimedia par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

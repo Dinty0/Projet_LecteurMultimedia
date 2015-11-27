@@ -21,11 +21,13 @@ class Interface
 		Format* _f;
 		tgui::Gui* _gui;
 	public:		
+
 		/**
 		 * @brief Constructeur
 		 * 
 		 */
 		Interface();
+
 		/**
 		 * @brief Constructeur
 		 * 
@@ -37,11 +39,13 @@ class Interface
 		 * @return Retourne les boutons créés
 		 */
 		Buttons* getButtons();
+
 		/**
 		 * @brief Getteur
 		 * @return Retourne le format créé
 		 */
 		Format* getFormat();
+		
 		/**
 		 * @brief Getteur
 		 * @return Retourne le gui de l'interface

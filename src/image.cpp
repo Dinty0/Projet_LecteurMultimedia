@@ -14,6 +14,11 @@ Image::Image(ImageInterfaceFactory* iiFact)
 
 }
 
+Image::~Image()
+{
+
+}
+
 void Image::afficher()
 {
     std::cout << "Je suis un image" << std::endl;
@@ -24,7 +29,7 @@ void Image::run()
     tgui::Callback callback;
 
     tgui::Picture::Ptr picture(*(_i.getGui()));
-    picture->load("src/fond-blanc.png");
+    picture->load("src/fonts/fond-blanc.png");
     _dir.setFilesVector("ressources/Image");
     _dir.createDirWidget(_i.getGui());
 

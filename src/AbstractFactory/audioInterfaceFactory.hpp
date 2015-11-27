@@ -17,6 +17,7 @@
 class AudioInterfaceFactory : public InterfaceFactory
 {
 	public:
+		
 		/**
 		 * @brief Crée l'interface adéquate à la lecture d'un fichier audio
 		 * @param ButtonsVA bva, FormatSmall fs

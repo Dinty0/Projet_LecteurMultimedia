@@ -24,12 +24,32 @@ class Audio
 
 	public:
 
+		/**
+		 * @brief Constructeur
+		 * 
+		 * @param AudioInterfaceFactory* aiFact : factory de l'interface audio
+		 */
 		Audio(AudioInterfaceFactory* aiFact);
+
+		/**
+		 * @brief Destructeur
+		 * 
+		 */
+		~Audio();
 		
+		/**
+		 * @brief fonction de test de création
+		 * 
+		 */
 		void afficher();
 		
+		/**
+		 * @brief lance l'audio et permet a l'utilisateur d'effectuer des actions dessus.
+		 * 
+		 */
 		void run();
-				/**
+		
+		/**
 		 * @brief Accesseur EtatCourant
 		 * 
 		 * @return EtatA : l'état courant de l'audio
@@ -65,19 +85,19 @@ class Audio
 		void setEtat(EtatA* ea);
 
 		/**
-		 * @brief utiliserBoutonLecture : selon l'état passe l'audio dans l'état lecture
+		 * @brief selon l'état passe l'audio dans l'état lecture
 		 * 
 		 */
 		void utiliserBoutonLecture(sf::Sound* sound);
 
 		/**
-		 * @brief utiliserBoutonStop : selon l'etat, passe l'audio dans l'état arret
+		 * @brief  selon l'etat, passe l'audio dans l'état arret
 		 * 
 		 */
 		void utiliserBoutonStop(sf::Sound* sound);
 
 		/**
-		 * @brief utiliserBoutonPause : selon l'etat, effectue l'action du bouttonpause
+		 * @brief selon l'etat, effectue l'action du bouttonpause
 		 * 
 		 */
 		void utiliserBoutonPause(sf::Sound* sound);

@@ -21,6 +21,7 @@ class EtatArretV : public EtatV
 		 * 
 		 */
 		EtatArretV();
+		
 		/**
 		 * @brief Constructeur
 		 * 

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['floattostring',['floatToString',['../classSubtitleSubject.html#acd31f06174b7b2a984c9b20566d412b8',1,'SubtitleSubject']]],
   ['format',['Format',['../classFormat.html',1,'']]],
   ['format_2ehpp',['format.hpp',['../format_8hpp.html',1,'']]],
   ['formatbig',['FormatBig',['../classFormatBig.html',1,'FormatBig'],['../classFormatBig.html#a705324cfcf29ccce442adbd5b327b821',1,'FormatBig::FormatBig()']]],

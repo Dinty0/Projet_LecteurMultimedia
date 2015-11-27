@@ -100,26 +100,98 @@ Graphe d'héritage de Subject:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:aecac0cb2c69c2d18db0e9433f580bde7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecac0cb2c69c2d18db0e9433f580bde7"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>addObs</b> (<a class="el" href="classObserver.html">Observer</a> *o)=0</td></tr>
+<tr class="memitem:aecac0cb2c69c2d18db0e9433f580bde7"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubject.html#aecac0cb2c69c2d18db0e9433f580bde7">addObs</a> (<a class="el" href="classObserver.html">Observer</a> *o)=0</td></tr>
+<tr class="memdesc:aecac0cb2c69c2d18db0e9433f580bde7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajout un <a class="el" href="classObserver.html">Observer</a>. Virtuel.  <a href="#aecac0cb2c69c2d18db0e9433f580bde7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aecac0cb2c69c2d18db0e9433f580bde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4455d35d683c0005035121c7442b3a55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4455d35d683c0005035121c7442b3a55"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>removeObs</b> (<a class="el" href="classObserver.html">Observer</a> *o)=0</td></tr>
+<tr class="memitem:a4455d35d683c0005035121c7442b3a55"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubject.html#a4455d35d683c0005035121c7442b3a55">removeObs</a> (<a class="el" href="classObserver.html">Observer</a> *o)=0</td></tr>
+<tr class="memdesc:a4455d35d683c0005035121c7442b3a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime un <a class="el" href="classObserver.html">Observer</a>. Virtuel.  <a href="#a4455d35d683c0005035121c7442b3a55">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4455d35d683c0005035121c7442b3a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a421d620f3f93365bfd57cd1e9165e501"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a421d620f3f93365bfd57cd1e9165e501"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyObs</b> ()=0</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubject.html#a421d620f3f93365bfd57cd1e9165e501">notifyObs</a> ()=0</td></tr>
+<tr class="memdesc:a421d620f3f93365bfd57cd1e9165e501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifie l'ensemble des observers ajoutés à au vecteur. Virtuel. <br /></td></tr>
 <tr class="separator:a421d620f3f93365bfd57cd1e9165e501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock">
 <p>Définition à la ligne <a class="el" href="Subject_8hpp_source.html#l00014">14</a> du fichier <a class="el" href="Subject_8hpp_source.html">Subject.hpp</a>.</p>
-</div><hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="aecac0cb2c69c2d18db0e9433f580bde7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Subject::addObs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classObserver.html">Observer</a> *&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ajout un <a class="el" href="classObserver.html">Observer</a>. Virtuel. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l'observer</td><td>à ajouter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>_retour 1 si l'observer a été ajouté </dd></dl>
+
+<p>Implémenté dans <a class="el" href="classSubtitleSubject.html#afc89e947aab454357dce8ea2f80403ee">SubtitleSubject</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4455d35d683c0005035121c7442b3a55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Subject::removeObs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classObserver.html">Observer</a> *&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Supprime un <a class="el" href="classObserver.html">Observer</a>. Virtuel. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l'observer</td><td>à supprimer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>_retour 1 si l'observer a été trouvé et supprimé sinon -1 </dd></dl>
+
+<p>Implémenté dans <a class="el" href="classSubtitleSubject.html#a60e75a2a34275176aaea81738ee4879d">SubtitleSubject</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
 <li>src/Observer/<a class="el" href="Subject_8hpp_source.html">Subject.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 26 Novembre 2015 15:22:04 pour Projet Lecteur Multimedia par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi 27 Novembre 2015 16:26:01 pour Projet Lecteur Multimedia par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

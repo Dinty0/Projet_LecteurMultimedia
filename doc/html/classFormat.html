@@ -101,8 +101,8 @@ Graphe d'héritage de Format:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a07f4f6f3b4c5182a63d684c4a20b9d96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07f4f6f3b4c5182a63d684c4a20b9d96"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>createFormat</b> ()=0</td></tr>
+<tr class="memitem:a07f4f6f3b4c5182a63d684c4a20b9d96"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFormat.html#a07f4f6f3b4c5182a63d684c4a20b9d96">createFormat</a> ()=0</td></tr>
+<tr class="memdesc:a07f4f6f3b4c5182a63d684c4a20b9d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée le format adéquat selon le type de média.  <a href="#a07f4f6f3b4c5182a63d684c4a20b9d96">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a07f4f6f3b4c5182a63d684c4a20b9d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5474275e85a8a47b5f0da28d7020283"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFormat.html#ad5474275e85a8a47b5f0da28d7020283">getLongueur</a> ()=0</td></tr>
 <tr class="memdesc:ad5474275e85a8a47b5f0da28d7020283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getteur virtuel.  <a href="#ad5474275e85a8a47b5f0da28d7020283">Plus de détails...</a><br /></td></tr>
@@ -118,6 +118,34 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>createFormat<
 <div class="textblock">
 <p>Définition à la ligne <a class="el" href="format_8hpp_source.html#l00014">14</a> du fichier <a class="el" href="format_8hpp_source.html">format.hpp</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a07f4f6f3b4c5182a63d684c4a20b9d96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Format::createFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Crée le format adéquat selon le type de média. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un <a class="el" href="classFormat.html">Format</a> </dd></dl>
+
+<p>Implémenté dans <a class="el" href="classFormatBig.html#a1c0bbd51c2093997c75624682dba8772">FormatBig</a>, et <a class="el" href="classFormatSmall.html#a985c6ed4ea1e16c267e0af5523dbba1f">FormatSmall</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a96150ade441ed68e056c20db86fd1607"></a>
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +170,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>createFormat<
 <p>Getteur virtuel. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Retourne la largeur de la fenetre </dd></dl>
 
-<p>Implémenté dans <a class="el" href="classFormatSmall.html#a64623731eba4359b6c2e32019aba42f7">FormatSmall</a>, et <a class="el" href="classFormatBig.html#acf985751797a389460bf4b5271ffbad4">FormatBig</a>.</p>
+<p>Implémenté dans <a class="el" href="classFormatBig.html#acf985751797a389460bf4b5271ffbad4">FormatBig</a>, et <a class="el" href="classFormatSmall.html#a64623731eba4359b6c2e32019aba42f7">FormatSmall</a>.</p>
 
 </div>
 </div>
@@ -170,7 +198,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>createFormat<
 <p>Getteur virtuel. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Retourne la longueur de la fenetre </dd></dl>
 
-<p>Implémenté dans <a class="el" href="classFormatSmall.html#a755b6b4f2c5f6c2fc8b5a49f08c0ec29">FormatSmall</a>, et <a class="el" href="classFormatBig.html#ae244731f051e849ce816189283d452f4">FormatBig</a>.</p>
+<p>Implémenté dans <a class="el" href="classFormatBig.html#ae244731f051e849ce816189283d452f4">FormatBig</a>, et <a class="el" href="classFormatSmall.html#a755b6b4f2c5f6c2fc8b5a49f08c0ec29">FormatSmall</a>.</p>
 
 </div>
 </div>
@@ -198,7 +226,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>createFormat<
 <p>Getteur virtuel. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Retourne la fenetre de type RenderWindow </dd></dl>
 
-<p>Implémenté dans <a class="el" href="classFormatSmall.html#ab15677846852366fb6dbea77dc22e82c">FormatSmall</a>, et <a class="el" href="classFormatBig.html#a48f6f2efc1d7d40f7562b8f1430f36c7">FormatBig</a>.</p>
+<p>Implémenté dans <a class="el" href="classFormatBig.html#a48f6f2efc1d7d40f7562b8f1430f36c7">FormatBig</a>, et <a class="el" href="classFormatSmall.html#ab15677846852366fb6dbea77dc22e82c">FormatSmall</a>.</p>
 
 </div>
 </div>
@@ -208,7 +236,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>createFormat<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 26 Novembre 2015 15:22:02 pour Projet Lecteur Multimedia par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi 27 Novembre 2015 16:25:59 pour Projet Lecteur Multimedia par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

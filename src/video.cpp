@@ -34,6 +34,8 @@ Video::Video(VideoInterfaceFactory* viFact)
 
 }
 
+Video::~Video(){}
+
 void Video::afficher()
 {
 	std::cout << "Je suis une vidéo" << std::endl;
@@ -114,7 +116,6 @@ void Video::run()
         while (_i.getFormat()->getWindow()->pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
-                
             {
                 _i.getFormat()->getWindow()->close();
             }
@@ -130,8 +131,13 @@ void Video::run()
                     
                     std::string path = "ressources/SousTitres/"+_dir.getItem(_dir.getItemSelected()).substr(0, _dir.getItem(_dir.getItemSelected()).size()-3)+"txt";
 
-                    boost::thread* lecture = new boost::thread(boost::bind(&Video::utiliserBoutonLecture, this, &movie));
+                    utiliserBoutonLecture(&movie);
+                    //boost::thread* lecture = new boost::thread(boost::bind(&Video::utiliserBoutonLecture, this, &movie));
                     boost::thread* subt = new boost::thread(boost::bind(&SubtitleSubject::setData, &suj, path));
+                    if (!(_i.getFormat()->getWindow()->isOpen()))
+                    {
+                        subt->interrupt();
+                    }
 
                 }
                 else
@@ -160,13 +166,13 @@ void Video::run()
                 }
 
             }
-            else if(callback.id==5){
+            else if(callback.id==5)
+            {
                 movie.openFromFile(_dir.returnPath(_dir.getItemSelected()));
                 _dir.hide();
                 movie.resizeToFrame(0, 0, _i.getFormat()->getWindow()->getSize().x, _i.getFormat()->getWindow()->getSize().y);
-
-
             }
+
         }
         _i.getFormat()->getWindow()->clear();
         _i.getGui()->draw();

@@ -14,37 +14,43 @@
 class Buttons
 {
 	public:
-		/*
+
+		/**
 		 * @brief Crée les boutons adéquats selon le type de média
 		 * @return Un vecteur de boutons
 		 *
 		 */
 		virtual void createButtons(tgui::Gui* gui)=0;
-		/*
+
+		/**
 		 * @brief Accesseur virtuel
 		 * @return _bni, le BouttonNI (next image).
 		 *
 		 */
 		virtual tgui::Button::Ptr getButtonNI()=0;
-		/*
+
+		/**
 		 * @brief Accesseur virtuel
 		 * @return _bpi, le BouttonPI (previous image).
 		 *
 		 */
 		virtual tgui::Button::Ptr getButtonPI()=0;
-		/*
+
+		/**
 		 * @brief Accesseur virtuel
 		 * @return _bpl, le BouttonPl (play)
 		 *
 		 */
 		virtual tgui::Button::Ptr getButtonPl()=0;
-		/*
+
+		/**
 		 * @brief Accesseur virtuel
 		 * @return _bpa, le BouttonPa (stop)
 		 *
 		 */
 		virtual tgui::Button::Ptr getButtonPa()=0;
-		/*
+		
+		/**
 		 * @brief Accesseur virtuel
 		 * @return _bst, le BouttonSt (pause)
 		 *

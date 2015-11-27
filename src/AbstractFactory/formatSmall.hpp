@@ -24,7 +24,7 @@ class FormatSmall : public Format
 		 */
 		FormatSmall();
 
-		/*
+		/**
 		 * @brief Crée le format petit
 		 * @return Un Format
 		 *
@@ -32,19 +32,19 @@ class FormatSmall : public Format
 		void createFormat();
 
 		/**
-		 * @brief Getteur
+		 * @brief Accesseur longueur
 		 * @return Retourne la longueur de la fenetre
 		 */
 		int getLongueur();
 
 		/**
-		 * @brief Getteur
+		 * @brief Accesseur largeur
 		 * @return Retourne la largeur de la fenetre
 		 */
 		int getLargeur();
 
-				/**
-		 * @brief Getteur
+		/**
+		 * @brief Accesseyr fenetre
 		 * @return Retourne la fenetre de type RenderWindow
 		 */
 		sf::RenderWindow* getWindow();

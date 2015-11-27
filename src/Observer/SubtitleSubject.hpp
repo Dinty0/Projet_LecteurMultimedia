@@ -22,57 +22,70 @@ class SubtitleSubject : public Subject
 		std::string _start;
 		std::string _end;
 		std::string _chrono;
+
 	public:	
+		/**
+		 * @brief Constructeur
+		 * 
+		 * @param sfe::Movie *m : pointeur vers sfe::Movie 
+		 */
 		SubtitleSubject(sfe::Movie *m);
-			/*
-			 * @brief Accesseur
-			 * @return _retour la dernière donnée retirée du fichier en format txt.
-			 */	
+
+		/**
+		 * @brief Accesseur
+		 * @return _retour la dernière donnée retirée du fichier en format txt.
+		 */	
 		std::string getData();
-			/*
-			 * @brief Accesseur mettant à jour modifiant la data
-			 * @param la nouvelle data
-			 *
-			 */
+
+		/**
+		 * @brief Accesseur mettant à jour modifiant la data
+		 * @param la nouvelle data
+		 *
+		 */
 		void setData(std::string l);
-			/*
-			 * @brief Ajout un Observer
-			 * @param l'observer à ajouter
-			 * @return _retour 1 si l'observer a été ajouté
-			 *
-			 */
+
+		/**
+		 * @brief Ajout un Observer
+		 * @param l'observer à ajouter
+		 * @return _retour 1 si l'observer a été ajouté
+		 *
+		 */
 		int addObs(Observer* o);
-			/*
-			 * @brief Supprime un Observer
-			 * @param l'observer à supprimer
-			 * @return _retour 1 si l'observer a été trouvé et supprimé sinon -1
-			 *
-			 */
+
+		/**
+		 * @brief Supprime un Observer
+		 * @param l'observer à supprimer
+		 * @return _retour 1 si l'observer a été trouvé et supprimé sinon -1
+		 *
+		 */
 		int removeObs(Observer* o);
-			/*
-			 * @brief Notifie l'ensemble des observers ajoutés à au vecteur
-			 *
-			 */
+
+		/**
+		 * @brief Notifie l'ensemble des observers ajoutés à au vecteur
+		 *
+		 */
 		void notifyObs();
 
-			/*
-			 * @brief Transforme un float en String
-			 * @param le float a modifier
-			 */
+		/**
+		 * @brief Transforme un float en String
+		 * @param le float a modifier
+		 */
 		void floatToString(float i);
-		/*
-			 * @brief Modifie un string en float 
-			 * @param la chaine de caractere a modifier
-			 * @return _retour retourne le float
-			 *
-			 */
+
+		/**
+		 * @brief Modifie un string en float 
+		 * @param la chaine de caractere a modifier
+		 * @return _retour retourne le float
+		 *
+		 */
 		float stringToFloat(std::string t);
-		/*
-			 * @brief Test si une chaine de caractère ne contient que des chiffres
-			 * @param la chaine de caracteres a tester
-			 * @return _retour retourne 1 si vraie sinon 0
-			 *
-			 */
+
+		/**
+		 * @brief Test si une chaine de caractère ne contient que des chiffres
+		 * @param la chaine de caracteres a tester
+		 * @return _retour retourne 1 si vraie sinon 0
+		 *
+		 */
 		bool isDigit(std::string s);
 
 };

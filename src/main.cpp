@@ -25,7 +25,7 @@ int main()
         return 1;
    
     tgui::Picture::Ptr picture(gui);
-    picture->load("src/fond-blanc.png");
+    picture->load("src/fonts/fond-blanc.png");
     
     tgui::Button::Ptr buttonVideo(gui);
     buttonVideo->load(THEME_CONFIG_FILE);
@@ -69,7 +69,6 @@ int main()
             {
                 VideoInterfaceFactory* viFact = new VideoInterfaceFactory();
                 Video vid(viFact);
-                vid.afficher();
                 vid.run();
             }
             else if (callback.id == 2)
@@ -77,7 +76,6 @@ int main()
                 
                 AudioInterfaceFactory* aiFact = new AudioInterfaceFactory();
                 Audio aud(aiFact);
-                aud.afficher();
                 aud.run();
             }
             else if (callback.id == 3)
@@ -85,7 +83,6 @@ int main()
 
                 ImageInterfaceFactory* iiFact = new ImageInterfaceFactory();
                 Image img(iiFact);
-                img.afficher();
                 img.run();
 			}
         } 

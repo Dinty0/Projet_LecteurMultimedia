@@ -3,9 +3,6 @@
 #include <SFML/Graphics.hpp>
 #include <TGUI/TGUI.hpp>
 
-
-VideoInterfaceFactory::VideoInterfaceFactory(){}
-
 Interface VideoInterfaceFactory::createInterface(Buttons* b, Format* f)
 {
 	// Création du format

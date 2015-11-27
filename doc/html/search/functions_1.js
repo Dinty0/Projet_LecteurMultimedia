@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['createinterface',['createInterface',['../classAudioInterfaceFactory.html#ad5367033861d4aadd1ad0b0f5fa1caeb',1,'AudioInterfaceFactory::createInterface()'],['../classImageInterfaceFactory.html#ace6a51fa023edcf9c99aee2a7e74ca5a',1,'ImageInterfaceFactory::createInterface()'],['../classVideoInterfaceFactory.html#ac0470dfd9d2685893c62ec922496a9bf',1,'VideoInterfaceFactory::createInterface()']]]
+  ['buttonsi',['ButtonsI',['../classButtonsI.html#aa6a67085a5c6e454cb2bc4c4fb0d5e61',1,'ButtonsI::ButtonsI()'],['../classButtonsI.html#add8708005f41ef4fac952c8a82dda809',1,'ButtonsI::ButtonsI(tgui::Button::Ptr bni, tgui::Button::Ptr bpi)']]],
+  ['buttonsva',['ButtonsVA',['../classButtonsVA.html#a45d0a219e4eb7b0c28ce47fd6d6829d7',1,'ButtonsVA::ButtonsVA()'],['../classButtonsVA.html#a146e69faf1e042093a69c2800b35c55b',1,'ButtonsVA::ButtonsVA(tgui::Button::Ptr bpl, tgui::Button::Ptr bpa, tgui::Button::Ptr bst)']]]
 ];

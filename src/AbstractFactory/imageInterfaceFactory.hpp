@@ -16,6 +16,7 @@
 class ImageInterfaceFactory : public InterfaceFactory
 {
 	public:
+		
 		/**
 		 * @brief Crée l'interface adéquate à la lecture d'un fichier image
 		 * @param ButtonsI bi, FormatBig fb

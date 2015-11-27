@@ -1,6 +1,12 @@
 var searchData=
 [
+  ['getbuttonni',['getButtonNI',['../classButtons.html#a12154e1ff630b800dd9d5193e97202a0',1,'Buttons::getButtonNI()'],['../classButtonsI.html#aecda6d6e3e44514421942ebe655eed79',1,'ButtonsI::getButtonNI()'],['../classButtonsVA.html#a15145a6402d6a4688a9c50a5c4fae630',1,'ButtonsVA::getButtonNI()']]],
+  ['getbuttonpa',['getButtonPa',['../classButtons.html#ab1fa18621507e31f3c6a66aaac91d065',1,'Buttons::getButtonPa()'],['../classButtonsI.html#a312da091b65cf79a9963590af5076d18',1,'ButtonsI::getButtonPa()'],['../classButtonsVA.html#ab222321660bfaed75d89645fa0ac37a0',1,'ButtonsVA::getButtonPa()']]],
+  ['getbuttonpi',['getButtonPI',['../classButtons.html#a82e85c87c04ead2f4bfbe661787e8094',1,'Buttons::getButtonPI()'],['../classButtonsI.html#a0d59693afaa2c3c01952b37dc42aeb0d',1,'ButtonsI::getButtonPI()'],['../classButtonsVA.html#a625dec1c4ede8100580e957ddac22a17',1,'ButtonsVA::getButtonPI()']]],
+  ['getbuttonpl',['getButtonPl',['../classButtons.html#aea3bd52fcd2c6b41d71a02fb923be3c7',1,'Buttons::getButtonPl()'],['../classButtonsI.html#a77f7974ed70abfc6fbfc601a15ef1b61',1,'ButtonsI::getButtonPl()'],['../classButtonsVA.html#a7c7a96011dc82bc8b57d0b84692ea52b',1,'ButtonsVA::getButtonPl()']]],
   ['getbuttons',['getButtons',['../classInterface.html#a90f1a995485ef1b9084701a7c7e44fd5',1,'Interface']]],
+  ['getbuttonst',['getButtonSt',['../classButtons.html#a2e03184bee5b70e8acb1f53c98632350',1,'Buttons::getButtonSt()'],['../classButtonsI.html#a66e442c75b0110fdd73be6c7d8ea7b19',1,'ButtonsI::getButtonSt()'],['../classButtonsVA.html#aad5dc82aec106cb00f78c92110daad0c',1,'ButtonsVA::getButtonSt()']]],
+  ['getdata',['getData',['../classSubtitleLineObs.html#a74983bcd67169fa7cabd03f156affa04',1,'SubtitleLineObs::getData()'],['../classSubtitleSubject.html#afcb35a1af34b6b926860d544893ae3c4',1,'SubtitleSubject::getData()']]],
   ['getetatarret',['getEtatArret',['../classAudio.html#a38d8b4444ff8a9ccf04a5d97e1690718',1,'Audio::getEtatArret()'],['../classVideo.html#a84d7495527cd76e6347bf85b2ec6e0ab',1,'Video::getEtatArret()']]],
   ['getetatcourant',['getEtatCourant',['../classAudio.html#abc78969597e0e29936687e5bd492afa5',1,'Audio']]],
   ['getetatlecture',['getEtatLecture',['../classAudio.html#a18a93b2599ee62c410a14d24616aa7ea',1,'Audio::getEtatLecture()'],['../classVideo.html#aee3ef41850206dac939f736e5b97c73c',1,'Video::getEtatLecture()']]],

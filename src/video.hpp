@@ -20,12 +20,29 @@ class Video
 		//...
 	public:
 		
-		Video();
-		
+		/**
+		 * @brief Constructeur
+		 * 
+		 * @param VideoInterfaceFactory* viFact : factory de l'interface video
+		 */
 		Video(VideoInterfaceFactory* viFact);
+
+		/**
+		 * @brief Destructeur
+		 * 
+		 */
+		~Video();
 		
+		/**
+		 * @brief fonction de test de création
+		 * 
+		 */
 		void afficher();
 
+		/**
+		 * @brief lance la vidéo et permet a l'utilisateur d'effectuer des actions dessus.
+		 * 
+		 */
 		void run();
 
 		EtatV* getEtatCourant();
@@ -58,20 +75,20 @@ class Video
 		void setEtat(EtatV* ev);
 
 		/**
-		 * @brief utiliserBoutonLecture : selon l'état passe la video dans l'état lecture
-		 * @param prend un object de type Movie.
+		 * @brief selon l'état passe la video dans l'état lecture
+		 * 
 		 */
 		void utiliserBoutonLecture(sfe::Movie* movie);
 
 		/**
-		 * @brief utiliserBoutonStop : selon l'etat, effectue l'action du bouttonstop
-		 * @param prend un object de type Movie.
+		 * @brief selon l'etat, effectue l'action du bouttonstop
+		 * 
 		 */
 		void utiliserBoutonStop(sfe::Movie* movie);
 
 		/**
-		 * @brief utiliserBoutonPause : selon l'etat, effectue l'action du bouttonpause
-		 * @param prend un object de type Movie.
+		 * @brief selon l'etat, effectue l'action du bouttonpause
+		 * 
 		 */
 		void utiliserBoutonPause(sfe::Movie* movie);
 

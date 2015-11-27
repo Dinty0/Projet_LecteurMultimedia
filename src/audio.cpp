@@ -28,6 +28,8 @@ Audio::Audio(AudioInterfaceFactory* aiFact)
 
 }
 
+Audio::~Audio(){}
+
 EtatA* Audio::getEtatCourant()
 {
     return _etatCourant;
@@ -81,7 +83,7 @@ void Audio::run()
 
     tgui::Callback callback;
     tgui::Picture::Ptr picture(*(_i.getGui()));
-    picture->load("src/fond-blanc.png");
+    picture->load("src/fonts/fond-blanc.png");
 
     _dir.setFilesVector("ressources/Musique");
     _dir.createDirWidget(_i.getGui());

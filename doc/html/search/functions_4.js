@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['getbuttons',['getButtons',['../classInterface.html#a90f1a995485ef1b9084701a7c7e44fd5',1,'Interface']]],
-  ['getetatarret',['getEtatArret',['../classAudio.html#a38d8b4444ff8a9ccf04a5d97e1690718',1,'Audio::getEtatArret()'],['../classVideo.html#a84d7495527cd76e6347bf85b2ec6e0ab',1,'Video::getEtatArret()']]],
-  ['getetatcourant',['getEtatCourant',['../classAudio.html#abc78969597e0e29936687e5bd492afa5',1,'Audio']]],
-  ['getetatlecture',['getEtatLecture',['../classAudio.html#a18a93b2599ee62c410a14d24616aa7ea',1,'Audio::getEtatLecture()'],['../classVideo.html#aee3ef41850206dac939f736e5b97c73c',1,'Video::getEtatLecture()']]],
-  ['getetatpause',['getEtatPause',['../classAudio.html#acef026681c15335e45892950223f9f32',1,'Audio::getEtatPause()'],['../classVideo.html#a91f40f05211f5b45e772d8bf68de7562',1,'Video::getEtatPause()']]],
-  ['getformat',['getFormat',['../classInterface.html#a09d8ee2dadc6a2e37437f1ead14f2816',1,'Interface']]],
-  ['getgui',['getGui',['../classInterface.html#af732676b1b5e04a4401a7c5eaa7f8ce6',1,'Interface']]],
-  ['getlargeur',['getLargeur',['../classFormat.html#a96150ade441ed68e056c20db86fd1607',1,'Format::getLargeur()'],['../classFormatBig.html#acf985751797a389460bf4b5271ffbad4',1,'FormatBig::getLargeur()'],['../classFormatSmall.html#a64623731eba4359b6c2e32019aba42f7',1,'FormatSmall::getLargeur()']]],
-  ['getlongueur',['getLongueur',['../classFormat.html#ad5474275e85a8a47b5f0da28d7020283',1,'Format::getLongueur()'],['../classFormatBig.html#ae244731f051e849ce816189283d452f4',1,'FormatBig::getLongueur()'],['../classFormatSmall.html#a755b6b4f2c5f6c2fc8b5a49f08c0ec29',1,'FormatSmall::getLongueur()']]],
-  ['getwindow',['getWindow',['../classFormat.html#a71418db76d6925708d403a1cd31b74f0',1,'Format::getWindow()'],['../classFormatBig.html#a48f6f2efc1d7d40f7562b8f1430f36c7',1,'FormatBig::getWindow()'],['../classFormatSmall.html#ab15677846852366fb6dbea77dc22e82c',1,'FormatSmall::getWindow()']]]
+  ['etatarreta',['EtatArretA',['../classEtatArretA.html#a283a80478fd920238ba7152d0cdfea5c',1,'EtatArretA::EtatArretA()'],['../classEtatArretA.html#aa5235b55db8f80efd91b2ee3bbd842de',1,'EtatArretA::EtatArretA(Audio *a)']]],
+  ['etatarretv',['EtatArretV',['../classEtatArretV.html#a5acc53409e45b619e4a4787822380813',1,'EtatArretV::EtatArretV()'],['../classEtatArretV.html#ab5cd0f3379bab61653f42732b446c266',1,'EtatArretV::EtatArretV(Video *v)']]],
+  ['etatlecturea',['EtatLectureA',['../classEtatLectureA.html#af296a1105e5b5ad7656b770e58d0b499',1,'EtatLectureA::EtatLectureA()'],['../classEtatLectureA.html#a184cb5df01065ea377e42d6c6167a248',1,'EtatLectureA::EtatLectureA(Audio *a)']]],
+  ['etatlecturev',['EtatLectureV',['../classEtatLectureV.html#a3d1e649e72665157198fb438169c09d7',1,'EtatLectureV::EtatLectureV()'],['../classEtatLectureV.html#af053295ec024e0afd1a08dfd861ec9a0',1,'EtatLectureV::EtatLectureV(Video *a)']]],
+  ['etatpausea',['EtatPauseA',['../classEtatPauseA.html#a2980943694ceb3f46af2ef813a9a2921',1,'EtatPauseA::EtatPauseA()'],['../classEtatPauseA.html#a76a16c20d023e39e72022076c768350d',1,'EtatPauseA::EtatPauseA(Audio *a)']]],
+  ['etatpausev',['EtatPauseV',['../classEtatPauseV.html#adc71aed982aab87ac55763db51b5a7d6',1,'EtatPauseV::EtatPauseV()'],['../classEtatPauseV.html#aa8eab25d136fd125b0c7bb4307fd1b6e',1,'EtatPauseV::EtatPauseV(Video *v)']]]
 ];

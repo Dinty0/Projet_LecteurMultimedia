@@ -14,7 +14,7 @@ class InterfaceFactory
 {
 	public:
 
-		/*
+		/**
 		 * @brief Crée l'interface adéquate selon le type de média
 		 * @return Une Interface
 		 *

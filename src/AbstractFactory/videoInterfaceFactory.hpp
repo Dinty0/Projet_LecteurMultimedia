@@ -17,7 +17,6 @@ class VideoInterfaceFactory : public InterfaceFactory
 {
 	public:
 
-		VideoInterfaceFactory();
 		/**
 		 * @brief Crée l'interface adéquate à la lecture d'un fichier video
 		 * @param ButtonsVa bva, FormatBig fb
